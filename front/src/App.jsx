@@ -1,13 +1,14 @@
-
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
-
   return (
-    <div>
-      <h1 class="bg-yellow-500">Hello world</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element=''/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

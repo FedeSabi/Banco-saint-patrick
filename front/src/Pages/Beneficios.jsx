@@ -1,58 +1,107 @@
+/*
 import { useState } from 'react';
-import carousel1 from '/docs/images/carousel/carousel-1.svg';
-import carousel2 from '/docs/images/carousel/carousel-2.svg';
-import carousel3 from '/docs/images/carousel/carousel-3.svg';
-import carousel4 from '/docs/images/carousel/carousel-4.svg';
-import carousel5 from '/docs/images/carousel/carousel-5.svg';
+import carousel1 from '../assets/Carrousel_imagen_1.png'
+import carousel2 from '../assets/Carrousel_imagen_2.png'
+import carousel3 from '../assets/Carrousel_imagen_3.png'
 
 const Beneficios = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const handlePrevSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide === 0 ? 4 : prevSlide - 1));
+        setCurrentSlide((prevSlide) => (prevSlide === 0 ? 2 : prevSlide - 1));
     };
 
     const handleNextSlide = () => {
-        setCurrentSlide((prevSlide) => (prevSlide === 4 ? 0 : prevSlide + 1));
+        setCurrentSlide((prevSlide) => (prevSlide === 2 ? 0 : prevSlide + 1));
     };
 
     return (
-        <div>
-            <div id="default-carousel" className="relative w-full" data-carousel="slide">
-                <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-                    <div className={currentSlide === 0 ? "block duration-700 ease-in-out" : "hidden"} data-carousel-item>
-                        <img src={carousel1} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-                    <div className={currentSlide === 1 ? "block duration-700 ease-in-out" : "hidden"} data-carousel-item>
-                        <img src={carousel2} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-                    <div className={currentSlide === 2 ? "block duration-700 ease-in-out" : "hidden"} data-carousel-item>
-                        <img src={carousel3} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-                    <div className={currentSlide === 3 ? "block duration-700 ease-in-out" : "hidden"} data-carousel-item>
-                        <img src={carousel4} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
-                    <div className={currentSlide === 4 ? "block duration-700 ease-in-out" : "hidden"} data-carousel-item>
-                        <img src={carousel5} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-                    </div>
+        <div className="flex flex-row h-[900px]">
+            <div className="flex-grow relative">
+            <div className="flex-grow flex items-left justify-left">
+                <div className="flex-row gap-10 items-center text-left mt-[400px] w-[600px] ml-24">
+                    <h1 className="text-5xl font-bold mb-4">Tarjetas de crédito para compras en cuotas</h1>
+                    <h2 className="text-xl font-semibold mb-4">La mejor forma de alcanzar lo que deseas.</h2>
+                    <h2 className="text-xl font-semibold mb-8">¡Tarjetealo!</h2>
+                    <button className="bg-green-800 text-white px-8 py-4 rounded-lg">Conocer tarjetas</button>
                 </div>
-                <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                    {[0, 1, 2, 3, 4].map((index) => (
-                        <button
-                            key={index}
-                            type="button"
-                            className={`w-3 h-3 rounded-full ${currentSlide === index ? "bg-white" : "bg-gray-500"}`}
-                            aria-current={currentSlide === index ? "true" : "false"}
-                            aria-label={`Slide ${index + 1}`}
-                            onClick={() => setCurrentSlide(index)}
-                        />
-                    ))}
+            </div>
+            
+                <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-around">
+                    <img
+                        src={currentSlide === 0 ? carousel1 : currentSlide === 1 ? carousel2 : carousel3}
+                        className="object-cover h-[700px] ml-[700px]"
+                        alt="Carousel Slide"
+                    />
                 </div>
-                <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev onClick={handlePrevSlide}>
-                    {/* Left arrow SVG */}
+                <button
+                    className="absolute top-1/2 -translate-y-1/2 left-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    onClick={handlePrevSlide}
+                >
+                    &lt;
                 </button>
-                <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next onClick={handleNextSlide}>
-                    {/* Right arrow SVG */}
+                <button
+                    className="absolute top-1/2 -translate-y-1/2 right-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    onClick={handleNextSlide}
+                >
+                    &gt;
+                </button>
+            </div>
+        </div>
+    );
+};
+
+export default Beneficios;
+
+*/
+
+import { useState } from 'react';
+import carousel1 from '../assets/Carrousel_imagen_1.png';
+import carousel2 from '../assets/Carrousel_imagen_2.png';
+import carousel3 from '../assets/Carrousel_imagen_3.png';
+
+const Beneficios = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slides = [carousel1, carousel2, carousel3];
+
+    const handlePrevSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+    };
+
+    const handleNextSlide = () => {
+        setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+    };
+
+    return (
+        <div className="flex flex-row h-[900px]">
+            <div className="flex-grow relative">
+                <div className="flex-grow flex items-left justify-left">
+                    <div className="flex-row gap-10 items-center text-left mt-[400px] w-[600px] ml-24">
+                        <h1 className="text-5xl font-bold mb-4">Tarjetas de crédito para compras en cuotas</h1>
+                        <h2 className="text-xl font-semibold mb-4">La mejor forma de alcanzar lo que deseas.</h2>
+                        <h2 className="text-xl font-semibold mb-8">¡Tarjetealo!</h2>
+                        <button className="bg-green-800 text-white px-8 py-4 rounded-lg">Conocer tarjetas</button>
+                    </div>
+                </div>
+                
+                <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-around mt-52">
+                    <img
+                        src={slides[currentSlide]}
+                        className="object-cover h-[700px] ml-[700px]"
+                        alt="Carousel Slide"
+                    />
+                </div>
+                <button
+                    className="absolute top-1/2 -translate-y-1/2 left-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    onClick={handlePrevSlide}
+                >
+                    &lt;
+                </button>
+                <button
+                    className="absolute top-1/2 -translate-y-1/2 right-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    onClick={handleNextSlide}
+                >
+                    &gt;
                 </button>
             </div>
         </div>

@@ -91,30 +91,30 @@ const Beneficios = () => {
     };
 
     return (
-        <div className="flex flex-row h-[900px]">
-            <div className="flex-grow relative">
-                <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-around mt-52">
+        <div className="flex flex-row ml-36 h-[500px] w-[80vw]">
+            <div className="flex-grow relative ">
+                <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-around">
                     <img
                         src={slides[currentSlide].image}
-                        className="object-cover h-[600px] w-auto ml-[620px]"
+                        className="object-cover h-[450px] w-auto ml-[620px]"
                         alt="Carousel Slide"
                     />
-                    <div className="text-black absolute top-0 left-0 ml-28 mt-32">
-                        <h1 className="text-5xl font-bold w-[600px] text-left flex-row gap-10 mb-16 items-center">{slides[currentSlide].text}</h1>
-                        <h1 className="text-4xl mb-4 w-[600px] text-left flex-row gap-10 items-center">{slides[currentSlide].text2}</h1>
-                        <h1 className='text-4xl mt-8 w-[600px] text-left flex-row gap-10 items-center'>{slides[currentSlide].text3}</h1>
-                        <button className="bg-amber-400 text-black font-bold text-2xl px-20 py-3 m-2 mt-36 rounded-lg">{slides[currentSlide].button}</button>
+                    <div className="text-black absolute top-0 left-0 ml-28 mt-24">
+                        <h1 className="text-5xl font-bold w-[600px] text-left flex-row gap-10 mb-12 items-center">{slides[currentSlide].text}</h1>
+                        <h1 className="text-2xl mb-4 w-[400px] text-left flex-row gap-10 items-center">{slides[currentSlide].text2}</h1>
+                        <h1 className='text-2xl mt-8 w-[400px] text-left flex-row gap-10 items-center'>{slides[currentSlide].text3}</h1>
+                        <button className="bg-amber-400 text-black font-bold text-2xl px-20 py-3 m-2 mt-16 rounded-lg">{slides[currentSlide].button}</button>
                         
                    </div>
                 </div>
                 <button
-                    className="absolute top-1/2 -translate-y-1/2 left-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    className="absolute top-1/2 -translate-y-1/2 left-2 border-black border-2 bg-white text-black px-4 py-2 rounded-full z-10"
                     onClick={handlePrevSlide}
                 >
                     &lt;
                 </button>
                 <button
-                    className="absolute top-1/2 -translate-y-1/2 right-2 bg-green-800 text-white px-6 py-2 rounded-lg z-10"
+                    className="absolute top-1/2 -translate-y-1/2 right-2 border-black border-2 bg-white text-black px-4 py-2 rounded-full z-10"
                     onClick={handleNextSlide}
                 >
                     &gt;

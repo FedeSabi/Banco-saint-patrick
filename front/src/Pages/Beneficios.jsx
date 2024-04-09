@@ -77,7 +77,7 @@ const Beneficios = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     
     const slides = [
-        { image: carousel1, text: "Tarjetas de crédito para compras en cuotas", text2: "La mejor forma de alcanzar lo que deseas", button: "Conocer tarjetas"  },
+        { image: carousel1, text: "Tarjetas de crédito para compras en cuotas", text2: "La mejor forma de alcanzar lo que deseas",text3: "¡Tarjetealo! 😎", button: "Conocer tarjetas"  },
         { image: carousel2, text: "Disfruta los mejores espectaculos con tu tarjeta Premium" , button: "Conocer mas"  },
         { image: carousel3, text: "Veranito con promos para disfrutar en familia", text2: "Tenes ahorros y cuota sin interes estes donde estes", button: "Conocer promos" }
     ];
@@ -102,6 +102,7 @@ const Beneficios = () => {
                     <div className="text-black absolute top-0 left-0 ml-28 mt-32">
                         <h1 className="text-5xl font-bold w-[600px] text-left flex-row gap-10 mb-16 items-center">{slides[currentSlide].text}</h1>
                         <h1 className="text-4xl mb-4 w-[600px] text-left flex-row gap-10 items-center">{slides[currentSlide].text2}</h1>
+                        <h1 className='text-4xl mt-8 w-[600px] text-left flex-row gap-10 items-center'>{slides[currentSlide].text3}</h1>
                         <button className="bg-amber-400 text-black font-bold text-2xl px-20 py-3 m-2 mt-36 rounded-lg">{slides[currentSlide].button}</button>
                         
                    </div>

@@ -2,7 +2,8 @@ import { Link } from "react-router-dom"
 import { FaCheck } from "react-icons/fa";
 export const Home =()=>{
     return(
-        <section className="bg-customGreen">
+        <section className="bg-customGreen flex">
+            <div className="w-[53vw] h-[86vh]">
             <div className="relative z-10 h-[60px] w-screen flex justify-around items-center border-2 border-solid border-customYellow">
                 <Link className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">Institucional</Link>
                 <Link className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">Canales de atención</Link>
@@ -18,14 +19,21 @@ export const Home =()=>{
             <p className="flex text-[40px] leading-[44.64px]"><FaCheck className="text-customYellow mr-[1rem]" /> Sacá tu tarjeta GRATIS. Descubrí por qué mas de 1 millón de personas nos eligen</p>
             <p className="flex text-[40px] leading-[44.64px]"><FaCheck className="text-customYellow mr-[1rem]" />Consultá tus movimientos y saldo de manera online, estás tan solo a un  click de distancia</p>
             </div>
-            <button className="relative z-10 my-[3rem] ml-[6rem] rounded-[15px] w-[443px] h-[78px] bg-customYellow text-black font-bold text-[36px] leading-[40.18px]">
-                Quiero ser cliente
+            <button className="relative z-10 mt-[3rem] ml-[6rem] rounded-[15px] w-[443px] h-[78px] bg-customYellow text-black font-bold text-[36px] leading-[40.18px]">
+                <Link className="text-[30px]" to={'/Registrarse'}> Quiero ser Cliente </Link>
             </button>
+
+            </div>
+            
+            <div className="w-[47vw] h-[83vh] flex justify-center items-center">
             <img
-                className="w-[700px] absolute z-1 right-0 top-[149px]"
+              className=" w-[33vw]"
                 src="/hand-card.png"
                 alt="logo saint patric"
             />
+                
+            </div>
+          
         </section>
     )
 }

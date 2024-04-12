@@ -34,7 +34,7 @@ export const Navbar = ({ login, onLogout }) => {
       >
         Hacete cliente
       </Link>
-      <Link
+      <Link to={'/PreguntasFrecuentes'}
         className={`${
           login
             ? "text-[#F6F6F6]"
@@ -43,7 +43,7 @@ export const Navbar = ({ login, onLogout }) => {
       >
         Preguntas frecuentes
       </Link>
-      <Link
+      <Link to={'/beneficios'}
         className={`${
           login
             ? "text-[#F6F6F6]"

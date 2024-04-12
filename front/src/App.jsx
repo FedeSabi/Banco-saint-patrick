@@ -1,4 +1,4 @@
-import React from "react";
+
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { Navbar } from './Components/Navbar';
 import { Home } from './Components/Home';
@@ -7,6 +7,7 @@ import { Login } from './Pages/Login';
 import { Registrarse } from "./Pages/Registrarse";
 import { useState } from "react";
 import { HomeTarjetas } from "./Pages/HomeTarjetas";
+import Footer from "./Components/Footer";
 
 
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/Registrarse" element={<Registrarse />} />
         <Route path="/beneficios" element={<Beneficios />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

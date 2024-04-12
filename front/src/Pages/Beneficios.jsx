@@ -91,7 +91,7 @@ const Beneficios = () => {
     };
 
     return (
-        <div className="flex flex-row ml-36 h-[500px] w-[80vw] mt-12">
+        <div className="flex flex-row ml-36 h-[500px] w-[80vw] mt-12 bg-zinc-500 sm:bg-blue-300 md:bg-green-300 lg:bg-yellow-300 xl:bg-orange-300 2xl:bg-red-500 ">
             <div className="flex-grow relative ">
                 <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-around border-2 rounded-2xl ">
                     <img

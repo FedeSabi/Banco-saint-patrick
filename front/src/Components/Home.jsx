@@ -28,16 +28,16 @@ export const Home = () => {
         </div>
         <div className="relative ml-[6rem] z-10 flex flex-col gap-[2rem] mt-[5rem] text-white w-[852px]">
           <p className="flex text-[40px] leading-[44.64px]">
-            <AiOutlineCheck className="text-customYellow mr-[1rem] size-7 mt-3" />{" "}
+          <AiOutlineCheck className="text-customYellow w-[60px] h-[50px] mr-4" />{" "}
             Gestioná tus transacciones de forma ágil y segura
           </p>
           <p className="flex text-[40px] leading-[44.64px]">
-          <AiOutlineCheck className="text-customYellow w-[60px] h-[50px] mr-4" />{" "}
+          <AiOutlineCheck className="text-customYellow w-[90px] h-[50px] mr-4" />{" "}
             Sacá tu tarjeta GRATIS. Descubrí por qué mas de 1 millón de personas
             nos eligen
           </p>
           <p className="flex text-[40px] leading-[44.64px]">
-            <AiOutlineCheck className="text-customYellow w-[60px] h-[50px] mr-4" />
+            <AiOutlineCheck className="text-customYellow w-[90px] h-[50px] mr-4" />
             Consultá tus movimientos y saldo de manera online, estás tan solo a
             un click de distancia
           </p>

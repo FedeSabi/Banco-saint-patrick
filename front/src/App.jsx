@@ -1,33 +1,32 @@
-
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { Navbar } from './Components/Navbar';
-import { Home } from './Components/Home';
+import { Navbar } from "./Components/Navbar";
+import { Home } from "./Components/Home";
 import Beneficios from "./Pages/Beneficios";
-import { Login } from './Pages/Login';
+import { Login } from "./Pages/Login";
 import { Registrarse } from "./Pages/Registrarse";
 import { useState } from "react";
 import { HomeTarjetas } from "./Pages/HomeTarjetas";
 import Footer from "./Components/Footer";
-
-
+import PreguntasFrecuentes from "./Pages/PreguntasFrecuentes";
 
 const RenderNavbar = ({ login, onLogout }) => {
   const navigate = useNavigate();
 
+  const shouldRenderNavbar = !["/Registrarse", "/Login"].includes(
+    window.location.pathname
+  );
 
-  const shouldRenderNavbar = !['/Registrarse', '/Login'].includes(window.location.pathname);
-
-  return shouldRenderNavbar ? <Navbar login={login} onLogout={onLogout} /> : null;
+  return shouldRenderNavbar ? (
+    <Navbar login={login} onLogout={onLogout} />
+  ) : null;
 };
 
 function App() {
-
-  const [login, setLogin] = useState('');
+  const [login, setLogin] = useState("");
   console.log(login);
 
   const handleLogout = () => {
-
-    setLogin('');
+    setLogin("");
   };
 
   return (
@@ -38,7 +37,8 @@ function App() {
         <Route path="/Login" element={<Login setLogin={setLogin} />} />
         <Route path="/HomeTarjetas" element={<HomeTarjetas />} />
         <Route path="/Registrarse" element={<Registrarse />} />
-        <Route path="/beneficios" element={<Beneficios />} />
+        <Route path="/Beneficios" element={<Beneficios />} />
+        <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -46,5 +46,3 @@ function App() {
 }
 
 export default App;
-
-

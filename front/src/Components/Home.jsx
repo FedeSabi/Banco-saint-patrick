@@ -52,7 +52,7 @@ export const Home = () => {
 
       <div className="w-[47vw] h-[83vh] flex justify-center items-center">
         <img
-          className=" w-[45vw] ml-10 mt-60"
+          className=" w-[45vw] ml-10 mt-72"
           src="/hand-card.png"
           alt="logo saint patric"
         />

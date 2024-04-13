@@ -8,6 +8,7 @@ import { useState } from "react";
 import { HomeTarjetas } from "./Pages/HomeTarjetas";
 import Footer from "./Components/Footer";
 import PreguntasFrecuentes from "./Pages/PreguntasFrecuentes";
+import Institucional from "./Pages/Institucional";
 
 const RenderNavbar = ({ login, onLogout }) => {
   const navigate = useNavigate();
@@ -39,6 +40,7 @@ function App() {
         <Route path="/Registrarse" element={<Registrarse />} />
         <Route path="/Beneficios" element={<Beneficios />} />
         <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
+        <Route path="/Institucional" element={<Institucional />} />
       </Routes>
       <Footer />
     </BrowserRouter>

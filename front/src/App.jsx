@@ -9,6 +9,8 @@ import { HomeTarjetas } from "./Pages/HomeTarjetas";
 import Footer from "./Components/Footer";
 import PreguntasFrecuentes from "./Pages/PreguntasFrecuentes";
 import Institucional from "./Pages/Institucional";
+import ProductosYservicios from "./Pages/ProductosYservicios";
+
 
 const RenderNavbar = ({ login, onLogout }) => {
   const navigate = useNavigate();
@@ -41,6 +43,7 @@ function App() {
         <Route path="/Beneficios" element={<Beneficios />} />
         <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
         <Route path="/Institucional" element={<Institucional />} />
+        <Route path="/Productosyservicios" element={<ProductosYservicios />} />
       </Routes>
       <Footer />
     </BrowserRouter>

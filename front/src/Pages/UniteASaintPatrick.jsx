@@ -13,7 +13,7 @@ const UniteASaintPatrick = () => {
         {/*divisor texto */}
         <div className=' text-customGreen w-[520px] flex flex-col justify-around  gap-2'>
           <div className='text-5xl font-bold  text-left'>
-            <h1 className='h-10'>Sumate a nuestro esquipo Saint Patrick</h1>
+            <h1 className='h-10'>Sumate a nuestro equipo Saint Patrick</h1>
           </div>
           <div className='font-bold'>
             <p className='text-3xl mb-10'>Postulate a nuestras busquedas y potencia lo mejor de vos</p>

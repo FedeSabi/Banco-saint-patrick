@@ -4,7 +4,7 @@ function NavbarInterno() {
   <a href="/institucional" className="text-2xl text-customYellow hover:text-white">Institucional</a>
   <a href="/ProductosYservicios" className="text-2xl text-customYellow hover:text-white">Productos y servicios</a>
   <a href="/CanalesDeAtencion" className="text-2xl text-customYellow hover:text-white">Canales de atención</a>
-  <a href="#" className="text-2xl text-customYellow hover:text-white">Unete a Saint Patrick</a>
+  <a href="/UniteASaintPatrick" className="text-2xl text-customYellow hover:text-white">Unete a Saint Patrick</a>
 </div>
 
   )

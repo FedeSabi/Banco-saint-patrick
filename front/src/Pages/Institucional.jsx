@@ -1,4 +1,4 @@
-import LogoSinColor from "./../../public/logo sin naranja.png";
+import LogoSinColor from './../icons/logo sin naranja.png'
 import { MdBarChart } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
 import { SiJabber } from "react-icons/si";

@@ -5,10 +5,10 @@ export const Home = () => {
     <section className="bg-customGreen flex">
       <div className="w-[53vw] h-[124vh] mb-6">
         <div className="relative z-10 h-[60px] w-screen flex justify-around items-center border-2 border-solid border-customYellow">
-          <Link className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
+          <Link to={"/Institucional"} className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
             Institucional
           </Link>
-          <Link className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
+          <Link to={'/CanalesDeAtencion'} className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
             Canales de atención
           </Link>
           <Link className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">

@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import PreguntasFrecuentes from "./Pages/PreguntasFrecuentes";
 import Institucional from "./Pages/Institucional";
 import ProductosYservicios from "./Pages/ProductosYservicios";
+import CanalesDeAtencion from "./Pages/CanalesDeAtencion";
 
 
 const RenderNavbar = ({ login, onLogout }) => {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
         <Route path="/Institucional" element={<Institucional />} />
         <Route path="/Productosyservicios" element={<ProductosYservicios />} />
+        <Route path="/CanalesDeAtencion" element={<CanalesDeAtencion />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

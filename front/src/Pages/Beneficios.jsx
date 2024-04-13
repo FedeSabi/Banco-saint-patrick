@@ -108,13 +108,13 @@ const Beneficios = () => {
                    </div>
                 </div>
                 <button
-                    className="absolute top-1/2 -translate-y-1/2 left-[-25px] border-black opacity-60 border-4 bg-white text-black px-4 py-2 rounded-full z-10"
+                    className="absolute top-1/2 -translate-y-1/2 left-[-24px] border-black opacity-100 border-2 bg-white text-black px-4 py-2 rounded-full z-10"
                     onClick={handlePrevSlide}
                 >
                     &lt;
                 </button>
                 <button
-                    className="absolute top-1/2 -translate-y-1/2 right-[-25px] border-black opacity-60 border-4 bg-white text-black px-4 py-2 rounded-full z-10"
+                    className="absolute top-1/2 -translate-y-1/2 right-[-24px] border-black opacity-100 border-2 bg-white text-black px-4 py-2 rounded-full z-10"
                     onClick={handleNextSlide}
                 >
                     &gt;

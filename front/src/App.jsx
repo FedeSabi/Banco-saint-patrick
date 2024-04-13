@@ -11,6 +11,7 @@ import PreguntasFrecuentes from "./Pages/PreguntasFrecuentes";
 import Institucional from "./Pages/Institucional";
 import ProductosYservicios from "./Pages/ProductosYservicios";
 import CanalesDeAtencion from "./Pages/CanalesDeAtencion";
+import UniteASaintPatrick from "./Pages/UniteASaintPatrick";
 
 
 const RenderNavbar = ({ login, onLogout }) => {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/Institucional" element={<Institucional />} />
         <Route path="/Productosyservicios" element={<ProductosYservicios />} />
         <Route path="/CanalesDeAtencion" element={<CanalesDeAtencion />}/>
+        <Route path="/UniteASaintPatrick" element={<UniteASaintPatrick />} />
       </Routes>
       <Footer />
     </BrowserRouter>

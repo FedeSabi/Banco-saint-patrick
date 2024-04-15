@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 export const Home = () => {
   return (
-    <section className="bg-customGreen flex">
-      <div className="w-[53vw] h-[124vh] mb-6">
+    <section className="bg-customGreen flex w-full">
+      <div className="w-[52vw] h-[124vh] mb-6">
         <div className="relative z-10 h-[60px] w-screen flex justify-around items-center border-2 border-solid border-customYellow">
           <Link to={"/Institucional"} className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
             Institucional

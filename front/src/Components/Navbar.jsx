@@ -1,29 +1,74 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaTimes } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false)
+  const handleClick = () =>{
+    setClick(!click)
+  }
   const content = (
     <>
-      <div className="">
-        <ul>
-          <Link to={'/'}>
-            <li>Solicita tu tarjeta</li>
-          </Link>
-          <Link to={'/'}>
-            <li>Hacete cliente</li>
-          </Link>
-          <Link to={'/'}>
-            <li>Preguntas frecuentes</li>
-          </Link>
-          <Link to={'/'}>
-            <li>Beneficios</li>
-          </Link>
+      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-customGrey transition ">
+        <ul className="text-center text-xl p-20">
+          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Link spy={true} smooth={true} to={'/'}>Solicita tu tarjeta</Link>
+          </li>
+          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Link spy={true} smooth={true} to={'/'} >Hacete cliente</Link>
+          </li>
+          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Link spy={true} smooth={true} to={'/'}>Preguntas frecuentes</Link>
+          </li>
+          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+            <Link spy={true} smooth={true} to={'/'}>Beneficios</Link>
+          </li>
         </ul>
       </div>
     </>
   );
-  return <nav> Navbar</nav>;
+  return (
+    <nav>
+      <div className="h-10vh flex justify-between z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
+        <div className="flex items-center">
+          <img
+            className="h-28"
+            src="/logo.png"
+            alt="logo saint patric"
+          />
+        </div>
+        <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
+          <div className="flex-10">
+            <ul className="flex gap-12 text-4xl font-semibold ">
+              <li>
+                <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
+              </li>
+              <li>
+                <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Hacete cliente</Link>
+              </li>
+              <li>
+                <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Preguntas frecuentes</Link>
+              </li>
+              <li>
+                <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Beneficios</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+            {click && content}
+        </div>
+        <button className="block sm:hidden transition" onClick={handleClick}>
+          {click ? <FaTimes /> : <GiHamburgerMenu />}
+        </button>
+      </div>
+    </nav>
+  );
 };
+
 export default Navbar;
+
 
 // navbar anterior que se sale el ancho de la pantalla
 /*

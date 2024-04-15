@@ -1,6 +1,34 @@
-// navar anterior que se sale el ancho de la pantalla
+import { Link } from "react-router-dom";
 
+const Navbar = () => {
+  const content = (
+    <>
+      <div className="">
+        <ul>
+          <Link to={'/'}>
+            <li>Solicita tu tarjeta</li>
+          </Link>
+          <Link to={'/'}>
+            <li>Hacete cliente</li>
+          </Link>
+          <Link to={'/'}>
+            <li>Preguntas frecuentes</li>
+          </Link>
+          <Link to={'/'}>
+            <li>Beneficios</li>
+          </Link>
+        </ul>
+      </div>
+    </>
+  );
+  return <nav> Navbar</nav>;
+};
+export default Navbar;
+
+// navbar anterior que se sale el ancho de la pantalla
+/*
 import { Link, NavLink } from "react-router-dom";
+
 
 export const Navbar = ({ login, onLogout }) => {
   return (
@@ -34,7 +62,8 @@ export const Navbar = ({ login, onLogout }) => {
       >
         Hacete cliente
       </Link>
-      <Link to={'/PreguntasFrecuentes'}
+      <Link
+        to={"/PreguntasFrecuentes"}
         className={`${
           login
             ? "text-[#F6F6F6]"
@@ -43,7 +72,8 @@ export const Navbar = ({ login, onLogout }) => {
       >
         Preguntas frecuentes
       </Link>
-      <Link to={'/beneficios'}
+      <Link
+        to={"/beneficios"}
         className={`${
           login
             ? "text-[#F6F6F6]"
@@ -103,3 +133,5 @@ export const Navbar = ({ login, onLogout }) => {
     </nav>
   );
 };
+
+*/

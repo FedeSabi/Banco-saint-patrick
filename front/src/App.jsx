@@ -13,6 +13,7 @@ import ProductosYservicios from "./Pages/ProductosYservicios";
 import CanalesDeAtencion from "./Pages/CanalesDeAtencion";
 import UniteASaintPatrick from "./Pages/UniteASaintPatrick";
 import Navbar from "./Components/Navbar";
+import SolicitaTuTarjeta from "./Pages/SolicitaTuTarjeta"
 
 
 /*const RenderNavbar = ({ login, onLogout }) => {
@@ -50,6 +51,7 @@ function App() {
         <Route path="/Productosyservicios" element={<ProductosYservicios />} />
         <Route path="/CanalesDeAtencion" element={<CanalesDeAtencion />}/>
         <Route path="/UniteASaintPatrick" element={<UniteASaintPatrick />} />
+        <Route path="/SolicitaTuTarjeta" element={<SolicitaTuTarjeta />} />
       </Routes>
       <Footer />
     </BrowserRouter>

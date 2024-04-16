@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-customGrey transition ">
         <ul className="text-center text-xl p-20">
           <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
-            <Link spy={true} smooth={true} to={'/'}>Solicita tu tarjeta</Link>
+            <Link spy={true} smooth={true} to={'/SolicitaTuTarjeta'}>Solicita tu tarjeta</Link>
           </li>
           <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
             <Link spy={true} smooth={true} to={'/'} >Hacete cliente</Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <div className="flex-10">
             <ul className="flex gap-12 text-4xl font-semibold ">
               <li>
-                <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
+                <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>
               <li>
                 <Link to={'/'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Hacete cliente</Link>

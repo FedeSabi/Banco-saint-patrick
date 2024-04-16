@@ -7,7 +7,7 @@ const UniteASaintPatrick = () => {
     <NavbarInterno />
     <div className='flex flex-row justify-evenly'>
         {/*divisor imagen */}
-        <div className='size-1/2 mt-10'>
+        <div className='w-[40%] h-[40%] mt-10'>
           <img src={Persona} />
         </div>
         {/*divisor texto */}

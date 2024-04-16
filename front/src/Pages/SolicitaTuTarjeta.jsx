@@ -1,3 +1,6 @@
+import tarjetasSinDatos from './../icons/Tarjetasindatos.png'
+import { BsCheckLg } from "react-icons/bs";
+
 function SolicitaTuTarjeta() {
   return (
     <div>
@@ -15,18 +18,33 @@ function SolicitaTuTarjeta() {
           </p>
         </div>
       </div>
+      <div className='relative flex justify-end '>
+         <div className='w-[40%] h-[40%] absolute mt-[-300px] mr-16 '>
+        <img src={tarjetasSinDatos} />
+      </div>
+      </div>
+     
       {/*segunda seccion */}
-      <div className=" w-full">
-        <div className="ml-48 flex flex-col ">
-          <h1 className="text-black w-[700px] text-4xl mt-4 font-semibold">
+      <div className=" w-full h-auto flex flex-col">
+        <div className="ml-48">
+          <h1 className="text-black w-[700px] text-4xl mt-12 font-semibold">
            Solicita tu tarjeta Saint Patrick GRATIS
           </h1>
           <h1 className="text-5xl text-white w-[800px]  font-semibold">
             La tarjeta de credito para gestionar tus transacciones
           </h1>
-          <p className="text-black w-[700px] text-3xl font-semibold">
+          <div className='flex flex-col gap-10'>
+          <p className="text-black w-[700px] text-3xl font-bold">
             Conocer los beneficios
           </p>
+          <div>
+            <p className="flex items-center text-3xl"><BsCheckLg className="text-customYellow w-[60px] h-[50px]" />Tarjeta Premium</p>
+          <p className='flex items-center text-3xl'><BsCheckLg className="text-customYellow w-[60px] h-[50px]" />Tarjeta Classic</p>
+          </div>
+          <button className="rounded-[15px] w-[441px] h-[59px] mb-20 bg-customYellow text-black font-semibold text-[30px]">
+            Quiero mi tarjeta
+        </button>
+          </div>
         </div>
       </div>
     </div>

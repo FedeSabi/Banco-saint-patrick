@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
           <div className="flex-10">
-            <ul className="lg:text-4xl flex gap-12 text-xl font-semibold ">
+            <ul className="2xl:text-4xl xl:text-3xl lg:text-xl flex gap-12 text-xl font-semibold ">
               <li>
                 <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>

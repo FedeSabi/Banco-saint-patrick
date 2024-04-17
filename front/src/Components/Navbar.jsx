@@ -10,18 +10,18 @@ const Navbar = () => {
   }
   const content = (
     <>
-      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-customGrey transition ">
-        <ul className="text-center text-xl p-20">
-          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+      <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition ">
+        <ul className="text-center text-xl text-amber-400 p-20">
+          <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/SolicitaTuTarjeta'}>Solicita tu tarjeta</Link>
           </li>
-          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+          <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/'} >Hacete cliente</Link>
           </li>
-          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+          <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/'}>Preguntas frecuentes</Link>
           </li>
-          <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
+          <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/'}>Beneficios</Link>
           </li>
         </ul>
@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
           <div className="flex-10">
-            <ul className="flex gap-12 text-4xl font-semibold ">
+            <ul className="lg:text-4xl flex gap-12 text-xl font-semibold ">
               <li>
                 <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
         <div>
             {click && content}
         </div>
-        <button className="block sm:hidden transition" onClick={handleClick}>
+        <button className="block sm:hidden transition text-yellow-400" onClick={handleClick}>
           {click ? <FaTimes /> : <GiHamburgerMenu />}
         </button>
       </div>

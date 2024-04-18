@@ -5,6 +5,9 @@ import { SiJabber } from "react-icons/si";
 import { RxCrosshair2 } from "react-icons/rx";
 import { VscOrganization } from "react-icons/vsc";
 import NavbarInterno from "./NavbarInterno";
+import Mision from './../icons/Misión.jpg'
+import Vision from './../icons/Visión.jpg'
+
 const Institucional = () => {
   return (
     <div>
@@ -67,8 +70,30 @@ const Institucional = () => {
       </p>
     </div>
   </div>
+  <div>
+    <div className='w-[1265px] h-[606px] flex justify-center ml-20 border shadow-xl'>
+    <img src={Mision} className='w-[910px] h-[606px]'/>
+    <div className='mr-10 w-72 h-72 text-left flex flex-col items-start ml-10 gap-12 mt-32 '>
+       <h1 className='text-customGreen font-bold text-2xl'>
+        Mision
+      </h1>
+      <p className='text-lg'>Ser un banco global lider, de prestigio, eficiente y rentable.Que nuestros clientes nos elijan por la confianza.seguridad y facil usabilidad. Aspiramos a posicionarnos como el mejor Home Banking para realizar transacciones en todo el mundo.</p>
+    </div>
+     
+    </div>
+  </div>
+  <div className='mt-40 mb-40 ml-20'>
+    <div className='w-[1265px] h-[606px] flex justify-center  border shadow-xl'>
+    <img src={Vision} className='w-[1050px] h-[606px] '/>
+    <div className='mr-10 h-72 text-left flex flex-col items-start ml-10 gap-10 mt-32'>
+       <h1 className='text-customGreen font-bold text-2xl'>
+        Vision
+      </h1>
+      <p className='text-lg'>Brindar servicios de escelencia a nuestros clientes, integrando las necesidades de nuestra gente y de nuestros accionistas y generando una contribucion significativa, orientada al crecimiento y al exitoso desarrollo de las comunidades en las que operamos.</p>
+    </div>
+    </div>
+  </div>
 </div>
-
   );
 };
 export default Institucional;

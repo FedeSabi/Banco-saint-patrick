@@ -74,13 +74,10 @@ const Registrarse = () => {
                         <div className="mb-6">
 
                             <input type="text" value={pin} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="PIN" />
-                            <p className="text-gray-600 text-xs mt-1">Must contain 1 uppercase letter, 1 number, min. 8 characters.</p>
+                          
                         </div>
                         <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Register</button>
-                        <p className="text-gray-600 text-xs text-center mt-4">
-                            By clicking Register, you agree to accept Apex Financial's
-                            <a href="#" className="text-blue-500 hover:underline">Terms and Conditions</a>.
-                        </p>
+                      
                     </form>
 
                 </div>

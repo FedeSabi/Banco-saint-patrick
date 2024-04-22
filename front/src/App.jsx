@@ -7,6 +7,9 @@ import { Login } from './Pages/Login';
 import { Registrarse } from "./Pages/Registrarse";
 import { useState } from "react";
 import { HomeTarjetas } from "./Pages/HomeTarjetas";
+import { Historial } from "./Pages/Historial";
+import { FlujosMovimientos } from "./Pages/FlujosMovimientos";
+import { Transferir } from "./Pages/Transferir";
 
 
 
@@ -35,9 +38,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login setLogin={setLogin} />} />
-        <Route path="/HomeTarjetas" element={<HomeTarjetas />} />
+        <Route path="/HomeTarjetas" element={<HomeTarjetas login={login}/>} />
         <Route path="/Registrarse" element={<Registrarse />} />
         <Route path="/beneficios" element={<Beneficios />} />
+        <Route path="/historial" element={<Historial />} />
+        <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
+        <Route path="/transferir" element={<Transferir login={login} />} />
       </Routes>
     </BrowserRouter>
   );

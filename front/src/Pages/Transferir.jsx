@@ -1,41 +1,61 @@
 import React, { useState } from 'react';
-import tarjeta1 from "/tarjeta1.png"
-import tarjeta2 from "/tarjeta2.png"
-import logo from "/logo.png"
-import chip from "/img_chip.jpg"
+import tarjeta1 from "/tarjeta1.png";
+import tarjeta2 from "/tarjeta2.png";
+import logo from "/logo.png";
+import chip from "/img_chip.jpg";
+import '../index.css'
 
-
-const HomeTarjetas = (nombre) => {
+const Transferir = (nombre) => {
     const [tarjeta1Seleccionada, setTarjeta1Seleccionada] = useState(false);
     const [tarjeta2Seleccionada, setTarjeta2Seleccionada] = useState(false);
 
-    const handleTarjeta1Change = (e) => {
-        setTarjeta1Seleccionada(e.target.checked);
-        if (e.target.checked) {
+    const [monto, setmMonto] = useState("");
+    const [destinatario, setdestinatario] = useState("");
+    const [mensaje, setMensaje] = useState(false);
+    const [envioMensaje, setEnvioMensaje] = useState("");
+
+   
+  
+
+    const EnvioFormulario = async (event) => {
+
+        event.preventDefault()
+        try {
+            const respuesta = await axios.post('http://localhost:5000/Transferir', { monto : Number( monto), destinatario : Number(destinatario) });
+            setLogin(respuesta.data.monto);
+
+            setMensaje(true);
+            setEnvioMensaje('sesion iniciada!!!');
+           
+            setNumeroTarjeta("");
+            setPin("");
+
+        } catch (error) {
+            console.log('error al logearse', error)
+        }
+    }
+
+    const handleTarjeta1Change = () => {
+        setTarjeta1Seleccionada(!tarjeta1Seleccionada);
+        if (tarjeta2Seleccionada) {
             setTarjeta2Seleccionada(false);
         }
     };
 
-    const handleTarjeta2Change = (e) => {
-        setTarjeta2Seleccionada(e.target.checked);
-        if (e.target.checked) {
+    const handleTarjeta2Change = () => {
+        setTarjeta2Seleccionada(!tarjeta2Seleccionada);
+        if (tarjeta1Seleccionada) {
             setTarjeta1Seleccionada(false);
         }
     };
+
     return (
         <div>
-            <div className='flex justify-center items-end h-20'>
-                <h1 className='font-custom font-normal text-center text-2xl sm:text-3xl md:text-4xl  '>
-                    ¿Con qué tarjeta deseas operar hoy?
-                </h1>
+         
 
-            </div>
-
-            <div class="bg-white w-full min-h-[63vh] flex justify-center items-center ">
-
-
-                <div class=" flex justify-around w-full flex-wrap">
-                <div>
+            <div className="bg-white w-full min-h-[52vh] flex justify-center items-center ">
+                <div className="flex justify-around w-full flex-wrap">
+                    <div>
                         <div className="flex items-center mb-5">
                             <input
                                 type="checkbox"
@@ -48,7 +68,9 @@ const HomeTarjetas = (nombre) => {
                                 Tarjeta 1
                             </label>
                         </div>
-                        <div class="w-[600px] h-[400px]  rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
+                       
+                        <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform ${tarjeta1Seleccionada ? 'rotated-card' : ''}`}>
+                            {/* Aquí colocas el contenido de la parte delantera de la tarjeta */}
 
                             <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
 
@@ -118,21 +140,25 @@ const HomeTarjetas = (nombre) => {
                                     </p>
                                 </div>
 
+
+
                             </div>
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
-                                    value='' 
-                                    readOnly 
+                                    value=''
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
 
                         </div>
+                     
                     </div>
+
                     <div>
                         <div className="flex items-center mb-5">
                             <input
@@ -146,11 +172,11 @@ const HomeTarjetas = (nombre) => {
                                 Tarjeta 2
                             </label>
                         </div>
-                        <div class="w-[600px] h-[400px]   rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
-
+                        <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${tarjeta2Seleccionada ? 'rotate-y-180' : ''}`}>
+                            {/* Aquí colocas el contenido de la parte delantera de la tarjeta */}
                             <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta2} />
 
-                            <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
+                            <div class={`w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around ${tarjeta2Seleccionada ? 'rotate-y-180' : ''}`}>
 
                                 <div class="flex justify-between">
                                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
@@ -220,62 +246,40 @@ const HomeTarjetas = (nombre) => {
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
-                                    value='' 
-                                    readOnly 
+                                    value=''
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
 
                         </div>
                     </div>
-
                 </div>
-
-
             </div>
 
-            <div className='flex justify-center items-center h-[11rem]'>
-                <button type="submit" className="w-[25vw] bg-customYellow font-custom font-simibold text-black text-xl sm:text-1xl px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
-            </div>
+<div className='h-[41vh] flex flex-col justify-center items-center'>
+<form onSubmit={EnvioFormulario} className='w-[40vw]'>
+                       
+                       <div className="mb-4">
 
+                           <input type="numero" value={monto} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Monto" />
+                       </div>
+                       <div className="mb-6">
+
+                           <input type="numero" value={destinatario} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Destinatario" />
+                          
+                       </div>
+                       <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Transferir</button>
+                     
+                   </form>
+
+</div>
+           
         </div>
+    );
+};
 
-    )
-}
-
-export { HomeTarjetas }
-
-
-/*
-
-  <div class="">
-                                        <p class="font-light text-xs">
-                                            CVV
-                                        </p>
-                                        <p class="font-bold tracking-more-wider text-sm">
-                                            ···
-                                        </p>
-                                    </div>
- <div>
-                        <form className='mt-[10px]' action="">
-                            <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-customBlack" required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
-
-
-
-                    <div>
-                        <form className='mt-[10px]' action="">
-                        <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-gray-700 " required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
- <div className='flex justify-center '>
-                <button type="submit" className="w-[25vw] bg-customYellow font-custom font-normal text-black px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
-            </div>
-
-*/
+export { Transferir };

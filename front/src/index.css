@@ -9,6 +9,8 @@
 
 
 
+
 .rotated-card {
-    transform: rotateY(180deg);
-}
+    transform: rotateY(180deg); /* Rotación en el eje Y */
+    transition: transform 0.6s ease; /* Transición suave */
+  }

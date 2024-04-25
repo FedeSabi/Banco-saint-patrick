@@ -4,29 +4,32 @@ import tarjeta2 from "/tarjeta2.png";
 import logo from "/logo.png";
 import chip from "/img_chip.jpg";
 import '../index.css'
+import { FcSignature } from "react-icons/fc";
 
 const Transferir = (nombre) => {
     const [tarjeta1Seleccionada, setTarjeta1Seleccionada] = useState(false);
     const [tarjeta2Seleccionada, setTarjeta2Seleccionada] = useState(false);
-
+    const [click, setClick] = useState(false);
+    const [click2, setClick2] = useState(false);
+    console.log(click);
     const [monto, setmMonto] = useState("");
     const [destinatario, setdestinatario] = useState("");
     const [mensaje, setMensaje] = useState(false);
     const [envioMensaje, setEnvioMensaje] = useState("");
 
-   
-  
+
+
 
     const EnvioFormulario = async (event) => {
 
         event.preventDefault()
         try {
-            const respuesta = await axios.post('http://localhost:5000/Transferir', { monto : Number( monto), destinatario : Number(destinatario) });
+            const respuesta = await axios.post('http://localhost:5000/Transferir', { monto: Number(monto), destinatario: Number(destinatario) });
             setLogin(respuesta.data.monto);
 
             setMensaje(true);
             setEnvioMensaje('sesion iniciada!!!');
-           
+
             setNumeroTarjeta("");
             setPin("");
 
@@ -48,14 +51,25 @@ const Transferir = (nombre) => {
             setTarjeta1Seleccionada(false);
         }
     };
+    const handleCardClick = () => {
+        console.log("Card clicked. Current click state:", click);
+        setClick(!click);
+    };
+    const handleCardClick2 = () => {
+        console.log("Card clicked. Current click state:", click2);
+        setClick2(!click2);
+    };
+
+
+
 
     return (
         <div>
-         
+
 
             <div className="bg-white w-full min-h-[52vh] flex justify-center items-center ">
                 <div className="flex justify-around w-full flex-wrap">
-                    <div>
+                    <div onClick={handleCardClick}>
                         <div className="flex items-center mb-5">
                             <input
                                 type="checkbox"
@@ -68,216 +82,392 @@ const Transferir = (nombre) => {
                                 Tarjeta 1
                             </label>
                         </div>
-                       
-                        <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform ${tarjeta1Seleccionada ? 'rotated-card' : ''}`}>
-                            {/* Aquí colocas el contenido de la parte delantera de la tarjeta */}
-
-                            <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
-
-                            <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
-
-                                <div class="flex justify-between">
-                                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
-                                    <img class="w-24 h-34" src={logo} />
-                                </div>
-                                <div class="pt-1">
-                                    <div className='w-[96px] flex justify-center'>
-                                        <img className='w-10 ' src={chip} alt="" />
-                                    </div>
-                                    <div className='flex justify-center text-[53px]'>
-                                        <p class="font-[200] tracking-more-wider">
-                                            4642  3489  9867  7632
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                                <div class=" pr-6 flex justify-end">
+                        {click ? (
+                            <div onClick={handleCardClick} className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ${click ? 'rotated-card' : ''}`}>
+                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
+                                <div class={'  absolute top-10 h-[34vh] flex flex-col  '}>
+                                    <div className='w-[599px]'>
 
 
-                                    <div class="flex justify-around ">
-                                        <div class="flex">
-                                            <div class="font-[500] text-xs">
-                                                <p className='mr-3 text-black'>
-                                                    Valid
-                                                </p>
-                                                <p className='text-black'>
-                                                    from
-                                                </p>
-                                            </div>
-                                            <p class="font-medium tracking-wider text-sm">
-                                                11/15
-                                            </p>
+                                        <div class="pt-1 bg-black h-[5rem] ">
+
+
                                         </div>
-                                        <div class="flex">
-                                            <div class="font-[500] text-xs text-xs">
-                                                <p className='mr-3 text-black'>
-                                                    Good
-                                                </p>
-                                                <p className='text-black'>
-                                                    thru
-                                                </p>
+                                    </div>
 
+                                    <div className='flex items-end justify-end'>
+
+                                        <div className='bg-green-200 '>
+
+                                            <p className={`text-black ${click ? 'rotated-card' : ''}`}>255</p>
+                                        </div>
+
+                                        <div className='w-[20vw] '>
+
+                                            <div className="pt-1 bg-white mt-10 flex justify-start w-[365px] ">
+
+
+                                                <div className='flex justify-start  '>
+
+                                                    <p class={`font-[200] text-[25px] text-black pr-5  ${click ? 'rotated-card' : ''}`}>
+                                                        8252
+                                                    </p>
+
+                                                </div>
+
+                                                <div className={`w-[154px] flex justify-start ${click ? 'rotated-card' : ''}`}>
+                                                    <FcSignature size={36} />
+                                                </div>
 
                                             </div>
-                                            <p class="font-medium tracking-wider text-sm">
-                                                03/25
-                                            </p>
+
 
                                         </div>
 
 
                                     </div>
 
+                                    <div className='flex justify-end'>
+                                        <h1 className={` pl-5 ${click ? 'rotated-card' : ''}`}>
+                                            Firma autorizada
+                                        </h1>
+                                    </div>
+                                    <div className='mt-10'>
+                                        <p className={`text-start pl-5 ${click ? 'rotated-card' : ''}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae repellat sed deleniti nihil similique, exercitationem numquam ducimus mollitia quibusdam delectus reprehenderit repellendus! Quisquam ad sapiente vel error exercitationem corrupti.</p>
+                                    </div>
+
                                 </div>
-                                <div class="flex justify-between">
-
-                                    <h1 class='text-2xl  font-serif font-semibold'>
-                                        {nombre.login}
-                                    </h1>
-                                    <p className='flex items-end'>
-                                        1425
-                                    </p>
-                                </div>
 
 
+
+
+
+
+                                <form className={`mt-[10px] ${click ? 'rotated-card' : ''}`} action="">
+                                    <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
+                                    <input
+                                        type="text"
+                                        id="saldoDisponible"
+                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        value=''
+                                        readOnly
+                                        placeholder="Saldo disponible"
+                                    />
+                                </form>
 
                             </div>
-                            <form className='mt-[10px]' action="">
-                                <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
-                                <input
-                                    type="text"
-                                    id="saldoDisponible"
-                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
-                                    value=''
-                                    readOnly
-                                    placeholder="Saldo disponible"
-                                />
-                            </form>
 
-                        </div>
-                     
+                        ) : (
+                            <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl `}>
+                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
+
+                                <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
+
+                                    <div class="flex justify-between">
+                                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
+                                        <img class="w-24 h-34" src={logo} />
+                                    </div>
+                                    <div class="pt-1">
+                                        <div className='w-[96px] flex justify-center'>
+                                            <img className='w-10 ' src={chip} alt="" />
+                                        </div>
+                                        <div className='flex justify-center text-[53px]'>
+                                            <p class="font-[200] tracking-more-wider">
+                                                4642  3489  9867  7632
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class=" pr-6 flex justify-end">
+
+
+                                        <div class="flex justify-around ">
+                                            <div class="flex">
+                                                <div class="font-[500] text-xs">
+                                                    <p className='mr-3 text-black'>
+                                                        Valid
+                                                    </p>
+                                                    <p className='text-black'>
+                                                        from
+                                                    </p>
+                                                </div>
+                                                <p class="font-medium tracking-wider text-sm">
+                                                    11/15
+                                                </p>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="font-[500] text-xs text-xs">
+                                                    <p className='mr-3 text-black'>
+                                                        Good
+                                                    </p>
+                                                    <p className='text-black'>
+                                                        thru
+                                                    </p>
+
+
+                                                </div>
+                                                <p class="font-medium tracking-wider text-sm">
+                                                    03/25
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="flex justify-between">
+
+                                        <h1 class='text-2xl  font-serif font-semibold'>
+                                            {nombre.login}
+                                        </h1>
+                                        <p className='flex items-end'>
+                                            1425
+                                        </p>
+                                    </div>
+
+
+
+                                </div>
+                                <form className='mt-[10px]' action="">
+                                    <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
+                                    <input
+                                        type="text"
+                                        id="saldoDisponible"
+                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        value=''
+                                        readOnly
+                                        placeholder="Saldo disponible"
+                                    />
+                                </form>
+
+                            </div>
+
+
+
+
+                        )
+
+                        }
+
                     </div>
 
-                    <div>
+
+                    <div onClick={handleCardClick2}>
                         <div className="flex items-center mb-5">
                             <input
                                 type="checkbox"
-                                id="tarjeta2"
-                                checked={tarjeta2Seleccionada}
-                                onChange={handleTarjeta2Change}
+                                id="tarjeta1"
+                                checked={tarjeta1Seleccionada}
+                                onChange={handleTarjeta1Change}
                                 className="rounded-full appearance-none w-6 h-6 border-2 border-gray-300 checked:bg-blue-500 checked:border-transparent focus:outline-none"
                             />
-                            <label htmlFor="tarjeta2" className="ml-2 text-black text-xl sm:text-2xl  font-custom font-semibold">
+                            <label htmlFor="tarjeta1" className="ml-2 text-black text-xl sm:text-2xl  font-custom font-semibold">
                                 Tarjeta 2
                             </label>
                         </div>
-                        <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${tarjeta2Seleccionada ? 'rotate-y-180' : ''}`}>
-                            {/* Aquí colocas el contenido de la parte delantera de la tarjeta */}
-                            <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta2} />
-
-                            <div class={`w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around ${tarjeta2Seleccionada ? 'rotate-y-180' : ''}`}>
-
-                                <div class="flex justify-between">
-                                    <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
-                                    <img class="w-24 h-34" src={logo} />
-                                </div>
-                                <div class="pt-1">
-                                    <div className='w-[96px] flex justify-center'>
-                                        <img className='w-10 ' src={chip} alt="" />
-                                    </div>
-                                    <div className='flex justify-center text-[53px]'>
-                                        <p class="font-[200] tracking-more-wider">
-                                            4642  3489  9867  7632
-                                        </p>
-
-                                    </div>
-                                </div>
-
-                                <div class=" pr-6 flex justify-end">
+                        {click2 ? (
+                            <div onClick={handleCardClick2} className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ${click2 ? 'rotated-card' : ''}`}>
+                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta2} />
+                                <div class={'  absolute top-10 h-[34vh] flex flex-col  '}>
+                                    <div className='w-[599px]'>
 
 
-                                    <div class="flex justify-around ">
-                                        <div class="flex">
-                                            <div class="font-[500] text-xs">
-                                                <p className='mr-3 text-black'>
-                                                    Valid
-                                                </p>
-                                                <p className='text-black'>
-                                                    from
-                                                </p>
-                                            </div>
-                                            <p class="font-medium tracking-wider text-sm">
-                                                11/15
-                                            </p>
+                                        <div class="pt-1 bg-black h-[5rem] ">
+
+
                                         </div>
-                                        <div class="flex">
-                                            <div class="font-[500] text-xs text-xs">
-                                                <p className='mr-3 text-black'>
-                                                    Good
-                                                </p>
-                                                <p className='text-black'>
-                                                    thru
-                                                </p>
+                                    </div>
 
+                                    <div className='flex items-end justify-end'>
+
+                                        <div className='bg-green-200 '>
+
+                                            <p className={`text-black ${click2 ? 'rotated-card' : ''}`}>305</p>
+                                        </div>
+
+                                        <div className='w-[20vw] '>
+
+                                            <div className="pt-1 bg-white mt-10 flex justify-start w-[365px] ">
+
+
+                                                <div className='flex justify-start  '>
+
+                                                    <p class={`font-[200] text-[25px] text-black pr-5  ${click2 ? 'rotated-card' : ''}`}>
+                                                        7000
+                                                    </p>
+
+                                                </div>
+
+                                                <div className={`w-[154px] flex justify-start ${click2 ? 'rotated-card' : ''}`}>
+                                                    <FcSignature size={36} />
+                                                </div>
 
                                             </div>
-                                            <p class="font-medium tracking-wider text-sm">
-                                                03/25
-                                            </p>
+
 
                                         </div>
 
 
                                     </div>
 
-                                </div>
-                                <div class="flex justify-between">
+                                    <div className='flex justify-end'>
+                                        <h1 className={` pl-5 ${click2 ? 'rotated-card' : ''}`}>
+                                            Firma autorizada
+                                        </h1>
+                                    </div>
+                                    <div className='mt-10'>
+                                        <p className={`text-start pl-5 ${click2 ? 'rotated-card' : ''}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae repellat sed deleniti nihil similique, exercitationem numquam ducimus mollitia quibusdam delectus reprehenderit repellendus! Quisquam ad sapiente vel error exercitationem corrupti.</p>
+                                    </div>
 
-                                    <h1 class='text-2xl  font-serif font-semibold'>
-                                        {nombre.login}
-                                    </h1>
-                                    <p className='flex items-end'>
-                                        1425
-                                    </p>
                                 </div>
+
+
+
+
+
+
+                                <form className={`mt-[10px] ${click2 ? 'rotated-card' : ''}`} action="">
+                                    <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
+                                    <input
+                                        type="text"
+                                        id="saldoDisponible"
+                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        value=''
+                                        readOnly
+                                        placeholder="Saldo disponible"
+                                    />
+                                </form>
 
                             </div>
-                            <form className='mt-[10px]' action="">
-                                <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl mt-10 font-semibold'>Saldo disponible</label>
-                                <input
-                                    type="text"
-                                    id="saldoDisponible"
-                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
-                                    value=''
-                                    readOnly
-                                    placeholder="Saldo disponible"
-                                />
-                            </form>
 
-                        </div>
+                        ) : (
+                            <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl `}>
+                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta2} />
+
+                                <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
+
+                                    <div class="flex justify-between">
+                                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
+                                        <img class="w-24 h-34" src={logo} />
+                                    </div>
+                                    <div class="pt-1">
+                                        <div className='w-[96px] flex justify-center'>
+                                            <img className='w-10 ' src={chip} alt="" />
+                                        </div>
+                                        <div className='flex justify-center text-[53px]'>
+                                            <p class="font-[200] tracking-more-wider">
+                                                4558  2256  6633  8524
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                    <div class=" pr-6 flex justify-end">
+
+
+                                        <div class="flex justify-around ">
+                                            <div class="flex">
+                                                <div class="font-[500] text-xs">
+                                                    <p className='mr-3 text-black'>
+                                                        Valid
+                                                    </p>
+                                                    <p className='text-black'>
+                                                        from
+                                                    </p>
+                                                </div>
+                                                <p class="font-medium tracking-wider text-sm">
+                                                    11/20
+                                                </p>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="font-[500] text-xs text-xs">
+                                                    <p className='mr-3 text-black'>
+                                                        Good
+                                                    </p>
+                                                    <p className='text-black'>
+                                                        thru
+                                                    </p>
+
+
+                                                </div>
+                                                <p class="font-medium tracking-wider text-sm">
+                                                    03/27
+                                                </p>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="flex justify-between">
+
+                                        <h1 class='text-2xl  font-serif font-semibold'>
+                                            {nombre.login}
+                                        </h1>
+                                        <p className='flex items-end'>
+                                            1425
+                                        </p>
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <form className='mt-[10px]' action="">
+                                    <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
+                                    <input
+                                        type="text"
+                                        id="saldoDisponible"
+                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        value=''
+                                        readOnly
+                                        placeholder="Saldo disponible"
+                                    />
+                                </form>
+
+                            </div>
+
+
+
+
+                        )
+
+                        }
+
                     </div>
+
+
+
+
+
+
                 </div>
+
             </div>
 
-<div className='h-[41vh] flex flex-col justify-center items-center'>
-<form onSubmit={EnvioFormulario} className='w-[40vw]'>
-                       
-                       <div className="mb-4">
 
-                           <input type="numero" value={monto} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Monto" />
-                       </div>
-                       <div className="mb-6">
+            <div className='h-[41vh] flex flex-col justify-center items-center'>
+                <form onSubmit={EnvioFormulario} className='w-[40vw]'>
 
-                           <input type="numero" value={destinatario} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Destinatario" />
-                          
-                       </div>
-                       <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Transferir</button>
-                     
-                   </form>
+                    <div className="mb-4">
 
-</div>
-           
+                        <input type="numero" value={monto} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Monto" />
+                    </div>
+                    <div className="mb-6">
+
+                        <input type="numero" value={destinatario} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Destinatario" />
+
+                    </div>
+                    <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Transferir</button>
+
+                </form>
+
+            </div>
+
         </div>
     );
 };

@@ -11,7 +11,9 @@ export default {
         customGrey: '#005758',
         customGreen: '#005758',
         customBlack: '#121212',
-        customGray:'#E9E9E9'
+        customGray:'#E9E9E9',
+        customGrayTranf:' #695959'
+        
         
       },
       fontFamily: {

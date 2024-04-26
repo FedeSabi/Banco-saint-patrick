@@ -17,6 +17,9 @@ import CanalesDeAtencion from "./Pages/CanalesDeAtencion";
 import UniteASaintPatrick from "./Pages/UniteASaintPatrick";
 import Navbar from "./Components/Navbar";
 import SolicitaTuTarjeta from "./Pages/SolicitaTuTarjeta"
+import { TransfTarjeta1 } from "./Pages/tranfTarjeta1";
+import { TransfTarjeta2 } from "./Pages/TranfTarjeta2";
+import { TransfRealizada } from "./Pages/TransfRealizada";
 
 
 /*const RenderNavbar = ({ login, onLogout }) => {
@@ -52,6 +55,9 @@ function App() {
         <Route path="/historial" element={<Historial />} />
         <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
         <Route path="/transferir" element={<Transferir  />} />
+        <Route path="/transfTarjeta1" element={<TransfTarjeta1  />} />
+        <Route path="/transfTarjeta2" element={<TransfTarjeta2  />} />
+        <Route path="/transfRealizada" element={<TransfRealizada  />} />
        {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}
        
         <Route path="/Registrarse" element={<Registrarse />} />

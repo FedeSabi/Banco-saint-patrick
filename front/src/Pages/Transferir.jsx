@@ -5,6 +5,7 @@ import logo from "/logo.png";
 import chip from "/img_chip.jpg";
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
+import axios from 'axios';
 
 const Transferir = (nombre) => {
     const [tarjeta1Seleccionada, setTarjeta1Seleccionada] = useState(false);
@@ -259,8 +260,8 @@ const Transferir = (nombre) => {
                             <input
                                 type="checkbox"
                                 id="tarjeta1"
-                                checked={tarjeta1Seleccionada}
-                                onChange={handleTarjeta1Change}
+                                checked={tarjeta2Seleccionada}
+                                onChange={handleTarjeta2Change}
                                 className="rounded-full appearance-none w-6 h-6 border-2 border-gray-300 checked:bg-blue-500 checked:border-transparent focus:outline-none"
                             />
                             <label htmlFor="tarjeta1" className="ml-2 text-black text-xl sm:text-2xl  font-custom font-semibold">

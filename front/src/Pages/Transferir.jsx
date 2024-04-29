@@ -65,11 +65,11 @@ const Transferir = (nombre) => {
 
 
     return (
-        <div>
+        <div className='bg-customBg '>
 
 
-            <div className="bg-white w-full min-h-[52vh] flex justify-center items-center ">
-                <div className="flex justify-around w-full flex-wrap">
+            <div className="bg-customBg  w-full min-h-[52vh] flex justify-center items-center ">
+                <div className="bg-customBg flex justify-around w-full flex-wrap">
                     <div onClick={handleCardClick}>
                         <div className="flex items-center mb-5">
                             <input
@@ -236,7 +236,7 @@ const Transferir = (nombre) => {
                                     <input
                                         type="text"
                                         id="saldoDisponible"
-                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        className="bg-customBg form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
                                         value=''
                                         readOnly
                                         placeholder="Saldo disponible"
@@ -334,7 +334,7 @@ const Transferir = (nombre) => {
                                     <input
                                         type="text"
                                         id="saldoDisponible"
-                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        className="bg-customBg form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
                                         value=''
                                         readOnly
                                         placeholder="Saldo disponible"
@@ -423,7 +423,7 @@ const Transferir = (nombre) => {
                                     <input
                                         type="text"
                                         id="saldoDisponible"
-                                        className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                        className="bg-customBg form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
                                         value=''
                                         readOnly
                                         placeholder="Saldo disponible"
@@ -456,11 +456,11 @@ const Transferir = (nombre) => {
 
                     <div className="mb-4">
 
-                        <input type="numero" value={monto} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Monto" />
+                        <input type="numero" value={monto} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="bg-customBg form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Monto" />
                     </div>
                     <div className="mb-6">
 
-                        <input type="numero" value={destinatario} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Destinatario" />
+                        <input type="numero" value={destinatario} onChange={(e) => setPin(e.target.value)} id="pin" className="bg-customBg form-input w-full bg-customGray px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Destinatario" />
 
                     </div>
                     <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Transferir</button>

@@ -42,7 +42,7 @@ const Registrarse = () => {
 
 
     return (
-        <div>
+        <div className="bg-customBg ">
             <div className='flex justify-center'>
                 <img className='w-48 md:w-56   h-auto mt-10 md:mt-12 lg:mt-14 xl:mt-16' src="/image.png" alt="" />
             </div>
@@ -62,18 +62,18 @@ const Registrarse = () => {
             <div className=" flex items-center justify-center h-[37vh]">
                 <div className="bg-white  rounded-lg  max-w-[37rem] w-full ml-[10px] mr-[10px]">
 
-                    <form onSubmit={EnvioFormulario}>
+                    <form className="bg-customBg " onSubmit={EnvioFormulario}>
                         <div className="mb-4">
 
-                            <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} id="fullName" className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Nombre" />
+                            <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} id="fullName" className=" bg-customBg form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Nombre" />
                         </div>
                         <div className="mb-4">
 
-                            <input type="text" value={numeroTarjeta} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Numero de tarjeta" />
+                            <input type="text" value={numeroTarjeta} onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className=" bg-customBg form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="Numero de tarjeta" />
                         </div>
                         <div className="mb-6">
 
-                            <input type="text" value={pin} onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="PIN" />
+                            <input type="text" value={pin} onChange={(e) => setPin(e.target.value)} id="pin" className=" bg-customBg form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="PIN" />
                           
                         </div>
                         <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Register</button>

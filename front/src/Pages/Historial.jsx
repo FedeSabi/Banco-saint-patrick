@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Historial = () => {
     return (
 
-        <div className='flex flex-col justify-around items-center h-[86vh] '>
+        <div className='flex flex-col justify-around items-center h-[86vh] bg-customBg '>
             <div className='flex justify-center items-center h-20'>
             <h1 className='font-custom font-normal text-center text-2xl sm:text-3xl '>Historial de Transacciones</h1>
             </div>

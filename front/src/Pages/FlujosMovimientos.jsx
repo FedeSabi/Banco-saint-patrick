@@ -6,7 +6,7 @@ import grafica_3 from '/grafica_3.png'
 
 const FlujosMovimientos = () => {
     return (
-        <div className='h-[86vh] flex flex-col justify-around'>
+        <div className='h-[86vh] flex flex-col justify-around bg-customBg'>
             <div className='flex justify-center items-center h-20 '>
                 <h1 className='font-custom font-normal text-center text-2xl sm:text-3xl'>
                     Flujo de Transacciones

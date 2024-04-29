@@ -68,7 +68,7 @@ const TransfTarjeta1 = (nombre) => {
 
 
 
-        <div className="bg-white w-full min-h-[52vh] flex justify-center items-center ">
+        <div className="bg-customBg  w-full min-h-[52vh] flex justify-center items-center ">
 
             <div className="flex justify-evenly items-center w-full flex-wrap h-[100vh]">
                 <div className='w-[100vw] flex justify-center'>
@@ -246,15 +246,15 @@ const TransfTarjeta1 = (nombre) => {
                             
                 </div>
                 <div className='h-[41vh] mt-[61px] flex  justify-center items-center'>
-                    <form onSubmit={EnvioFormulario} className='w-[32vw] h-[86%] flex flex-col justify-around'>
+                    <form  onSubmit={EnvioFormulario} className='w-[32vw] h-[86%] flex flex-col justify-around'>
 
                         <div className="mb-4">
                             <label htmlFor="" className='font-custom font-semibold text-customGrayTranf text-[28px]'>Monto a transferir</label>
-                            <input type="numero" onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="form-input w-full h-[58px] text-[28px] text-customBlack  font-medium  px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Monto a transferir" />
+                            <input type="numero" onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium  px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Monto a transferir" />
                         </div>
                         <div className="mb-6">
                             <label htmlFor="" className='font-custom font-semibold text-customGrayTranf text-[28px]'>Cuenta destino</label>
-                            <input type="numero" onChange={(e) => setPin(e.target.value)} id="pin" className="form-input w-full h-[58px] text-[28px] text-customBlack  font-medium px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Cuenta destino" />
+                            <input type="numero" onChange={(e) => setPin(e.target.value)} id="pin" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Cuenta destino" />
 
                         </div>
 

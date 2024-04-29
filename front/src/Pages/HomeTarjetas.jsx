@@ -23,7 +23,7 @@ const HomeTarjetas = (nombre) => {
         }
     };
     return (
-        <div>
+        <div className='bg-customBg '>
             <div className='flex justify-center items-end h-20'>
                 <h1 className='font-custom font-normal text-center text-2xl sm:text-3xl md:text-4xl  '>
                     ¿Con qué tarjeta deseas operar hoy?
@@ -31,10 +31,10 @@ const HomeTarjetas = (nombre) => {
 
             </div>
 
-            <div class="bg-white w-full min-h-[63vh] flex justify-center items-center ">
+            <div class="bg-customBg  w-full min-h-[63vh] flex justify-center items-center ">
 
 
-                <div class=" flex justify-around w-full flex-wrap">
+                <div class=" flex justify-around w-full flex-wrap bg-customBg ">
                 <div>
                         <div className="flex items-center mb-5">
                             <input
@@ -124,7 +124,7 @@ const HomeTarjetas = (nombre) => {
                                 <input
                                     type="text" 
                                     id="saldoDisponible"
-                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
                                     value='' 
                                     readOnly 
                                     placeholder="Saldo disponible"
@@ -222,7 +222,7 @@ const HomeTarjetas = (nombre) => {
                                 <input
                                     type="text" 
                                     id="saldoDisponible"
-                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black"
+                                    className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
                                     value='' 
                                     readOnly 
                                     placeholder="Saldo disponible"

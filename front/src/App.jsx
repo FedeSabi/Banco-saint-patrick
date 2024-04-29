@@ -20,6 +20,7 @@ import SolicitaTuTarjeta from "./Pages/SolicitaTuTarjeta"
 import { TransfTarjeta1 } from "./Pages/tranfTarjeta1";
 import { TransfTarjeta2 } from "./Pages/TranfTarjeta2";
 import { TransfRealizada } from "./Pages/TransfRealizada";
+import { IniciarSesion } from "./Pages/IniciarSesion";
 
 
 /*const RenderNavbar = ({ login, onLogout }) => {
@@ -58,6 +59,7 @@ function App() {
         <Route path="/transfTarjeta1" element={<TransfTarjeta1  />} />
         <Route path="/transfTarjeta2" element={<TransfTarjeta2  />} />
         <Route path="/transfRealizada" element={<TransfRealizada  />} />
+        <Route path="/iniciarSesion" element={<IniciarSesion />} />
        {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}
        
         <Route path="/Registrarse" element={<Registrarse />} />

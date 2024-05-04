@@ -1,8 +1,9 @@
-import { useState } from 'react';
-//import tarjeta1 from "/tarjeta1.png"
-//import tarjeta2 from "/tarjeta2.png"
+import React, { useState } from 'react';
+import tarjeta1 from "/tarjeta1.png"
+import tarjeta2 from "/tarjeta2.png"
 import logo from "/logo.png"
 import chip from "/img_chip.jpg"
+import { Link } from 'react-router-dom';
 
 
 const HomeTarjetas = (nombre) => {
@@ -36,7 +37,7 @@ const HomeTarjetas = (nombre) => {
 
 
                 <div class=" flex justify-around w-full flex-wrap bg-customBg ">
-                <div>
+                    <div>
                         <div className="flex items-center mb-5">
                             <input
                                 type="checkbox"
@@ -125,11 +126,11 @@ const HomeTarjetas = (nombre) => {
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
-                                    value='' 
-                                    readOnly 
+                                    value='$-2.000.000'
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
@@ -223,11 +224,11 @@ const HomeTarjetas = (nombre) => {
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
-                                    value='' 
-                                    readOnly 
+                                    value='$-1.500.000'
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
@@ -241,8 +242,9 @@ const HomeTarjetas = (nombre) => {
             </div>
 
             <div className='flex justify-center items-center h-[11rem]'>
-            <button type="submit" class="w-full w-[300px] sm:w-[25vw] bg-customYellow font-custom font-simibold text-black text-xl sm:text-1xl px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
-
+                <Link to={'/historial'}>
+                    <button type="submit" class="w-full w-[300px] sm:w-[25vw] bg-customYellow font-custom font-simibold text-black text-xl sm:text-1xl px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
+                </Link>
             </div>
 
         </div>
@@ -253,33 +255,4 @@ const HomeTarjetas = (nombre) => {
 export { HomeTarjetas }
 
 
-/*
 
-  <div class="">
-                                        <p class="font-light text-xs">
-                                            CVV
-                                        </p>
-                                        <p class="font-bold tracking-more-wider text-sm">
-                                            ···
-                                        </p>
-                                    </div>
- <div>
-                        <form className='mt-[10px]' action="">
-                            <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-customBlack" required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
-
-
-
-                    <div>
-                        <form className='mt-[10px]' action="">
-                        <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-gray-700 " required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
- <div className='flex justify-center '>
-                <button type="submit" className="w-[25vw] bg-customYellow font-custom font-normal text-black px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
-            </div>
-
-*/

@@ -35,7 +35,7 @@ const Beneficios = () => {
                         <h1 className="text-5xl font-bold w-[600px] text-left flex-row gap-10 mb-12 items-center">{slides[currentSlide].text}</h1>
                         <h1 className="text-2xl mb-4 w-[400px] text-left flex-row gap-10 items-center">{slides[currentSlide].text2}</h1>
                         <h1 className='text-2xl mt-8 w-[400px] text-left flex-row gap-10 items-center'>{slides[currentSlide].text3}</h1>
-                        <button className="bg-amber-400 text-black font-bold text-2xl px-20 py-3 m-2 mt-10 rounded-lg">{slides[currentSlide].button}</button>
+                        <button className="bg-amber-400 text-black font-bold text-2xl px-20 py-3 m-2 mt-8 rounded-lg">{slides[currentSlide].button}</button>
                         
                    </div>
                 </div>

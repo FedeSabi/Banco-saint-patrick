@@ -54,7 +54,9 @@ const Navbar = () => {
                 <Link to={'/beneficios'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Beneficios</Link>
               </li>
               <div>
-                <button className="rounded-[15px] w-64 h-12 bg-customYellow hover:bg-customGreen hover:text-white text-black font-bold -mt-2" > Iniciar sesion</button>
+                <Link to={'/Login'}>
+                <button className="rounded-[15px] w-64 h-12 bg-customYellow text-black font-bold -mt-2" > Iniciar sesion</button>
+                </Link>
               </div>
             </ul>
           </div>

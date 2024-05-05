@@ -1,8 +1,9 @@
-import { useState } from 'react';
-//import tarjeta1 from "/tarjeta1.png"
-//import tarjeta2 from "/tarjeta2.png"
+import React, { useState } from 'react';
+import tarjeta1 from "/tarjeta1.png"
+import tarjeta2 from "/tarjeta2.png"
 import logo from "/logo.png"
 import chip from "/img_chip.jpg"
+import { Link } from 'react-router-dom';
 
 
 const HomeTarjetas = (nombre) => {
@@ -31,11 +32,12 @@ const HomeTarjetas = (nombre) => {
 
             </div>
 
-            <div class="bg-customBg  w-full min-h-[63vh] flex justify-center items-center ">
+            <div class="bg-customBg  w-full min-h-[63vh] mt-[30px] sm:min-h-[63vh] sm:mt-[9%] md:min-h-[128vh] md:mt-[9%]  lg:min-h-[63vh] xl:min-h-[63vh] xl:mt-[5rem] flex justify-center items-center md:items-stretch">
+
 
 
                 <div class=" flex justify-around w-full flex-wrap bg-customBg ">
-                <div>
+                    <div>
                         <div className="flex items-center mb-5">
                             <input
                                 type="checkbox"
@@ -48,29 +50,31 @@ const HomeTarjetas = (nombre) => {
                                 Tarjeta 1
                             </label>
                         </div>
-                        <div class="w-[600px] h-[400px]  rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
+                        <div class="ml-[8px] mb-[46px] mr-[8px] sm:h-[280px] md:h-[425px] lg:h-[300px] xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
 
                             <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
 
-                            <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
+                            <div class="w-full px-8 absolute top-1 h-[30vh] sm:h-[30vh] md:h-[28vh] lg:h-[34vh] flex flex-col justify-around">
 
                                 <div class="flex justify-between">
                                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
-                                    <img class="w-24 h-34" src={logo} />
+                                    <img class="w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[4rem] md:h-[6rem] lg:w-20 lg:h-[6rem] xl:w-24 xl:h-[7rem] 2xl:w-24 2xl:h-[7rem]" src={logo} />
+
+
                                 </div>
                                 <div class="pt-1">
                                     <div className='w-[96px] flex justify-center'>
                                         <img className='w-10 ' src={chip} alt="" />
                                     </div>
-                                    <div className='flex justify-center text-[53px]'>
-                                        <p class="font-[200] tracking-more-wider">
+                                    <div className='flex justify-center lg:mt-3'>
+                                        <p class="font-[200] tracking-more-wider text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[2.1rem] xl:text-[3.5rem] 2xl:text-[3.5rem]">
                                             4642  3489  9867  7632
                                         </p>
 
                                     </div>
                                 </div>
 
-                                <div class=" pr-6 flex justify-end">
+                                <div class=" pr-6 flex justify-end mt-5">
 
 
                                     <div class="flex justify-around ">
@@ -122,11 +126,11 @@ const HomeTarjetas = (nombre) => {
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl  mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
-                                    value='' 
-                                    readOnly 
+                                    value='$-2.000.000'
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
@@ -146,22 +150,22 @@ const HomeTarjetas = (nombre) => {
                                 Tarjeta 2
                             </label>
                         </div>
-                        <div class="w-[600px] h-[400px]   rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
+                        <div class="ml-[8px] mr-[8px] sm:h-[280px] md:h-[425px] lg:h-[300px] xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
 
                             <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta2} />
 
-                            <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
+                            <div class="w-full px-8 absolute top-1 h-[30vh] sm:h-[30vh] md:h-[28vh] lg:h-[34vh] flex flex-col justify-around">
 
                                 <div class="flex justify-between">
                                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
-                                    <img class="w-24 h-34" src={logo} />
+                                    <img class="w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[4rem] md:h-[6rem] lg:w-20 lg:h-[6rem] xl:w-24 xl:h-[7rem] 2xl:w-24 2xl:h-[7rem]" src={logo} />
                                 </div>
                                 <div class="pt-1">
                                     <div className='w-[96px] flex justify-center'>
                                         <img className='w-10 ' src={chip} alt="" />
                                     </div>
                                     <div className='flex justify-center text-[53px]'>
-                                        <p class="font-[200] tracking-more-wider">
+                                        <p class="font-[200] tracking-more-wider text-[2rem] sm:text-[2rem] md:text-[3rem] lg:text-[2.1rem] xl:text-[3.5rem] 2xl:text-[3.5rem]">
                                             4642  3489  9867  7632
                                         </p>
 
@@ -220,11 +224,11 @@ const HomeTarjetas = (nombre) => {
                             <form className='mt-[10px]' action="">
                                 <label htmlFor="saldoDisponible" className='text-black text-xl sm:text-2xl mt-10 font-semibold'>Saldo disponible</label>
                                 <input
-                                    type="text" 
+                                    type="text"
                                     id="saldoDisponible"
                                     className="form-input font-semibold mt-4 w-full px-4 py-2 border rounded-lg text-black bg-customBg "
-                                    value='' 
-                                    readOnly 
+                                    value='$-1.500.000'
+                                    readOnly
                                     placeholder="Saldo disponible"
                                 />
                             </form>
@@ -238,7 +242,9 @@ const HomeTarjetas = (nombre) => {
             </div>
 
             <div className='flex justify-center items-center h-[11rem]'>
-                <button type="submit" className="w-[25vw] bg-customYellow font-custom font-simibold text-black text-xl sm:text-1xl px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
+                <Link to={'/historial'}>
+                    <button type="submit" class="w-full w-[300px] sm:w-[25vw] bg-customYellow font-custom font-simibold text-black text-xl sm:text-1xl px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
+                </Link>
             </div>
 
         </div>
@@ -249,33 +255,4 @@ const HomeTarjetas = (nombre) => {
 export { HomeTarjetas }
 
 
-/*
 
-  <div class="">
-                                        <p class="font-light text-xs">
-                                            CVV
-                                        </p>
-                                        <p class="font-bold tracking-more-wider text-sm">
-                                            ···
-                                        </p>
-                                    </div>
- <div>
-                        <form className='mt-[10px]' action="">
-                            <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-customBlack" required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
-
-
-
-                    <div>
-                        <form className='mt-[10px]' action="">
-                        <label htmlFor="Saldo disponible" className='mt-[10px] font-custom font-normal'>Saldo disponible</label>
-                            <input type="text"  id="fullName" className="form-input font-custom font-normal mt-[10px] w-full px-4 py-2 border rounded-lg text-gray-700 " required placeholder="Saldo disponible" />
-                        </form>
-                    </div>
- <div className='flex justify-center '>
-                <button type="submit" className="w-[25vw] bg-customYellow font-custom font-normal text-black px-4 py-2 rounded-lg hover:bg-[#E1A000] focus:outline-none  focus:ring-opacity-50">Histotial de transaciones</button>
-            </div>
-
-*/

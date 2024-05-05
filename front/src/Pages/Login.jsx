@@ -75,6 +75,7 @@ const Login = ({setLogin}) => {
                             <input type="numero" value={pin} onChange={(e) => setPin(e.target.value)} id="pin" className=" bg-customBg form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500" required placeholder="PIN" />
                            
                         </div>
+                        
                         <button type="submit" className="w-full bg-customGray text-customBlack px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Continuar</button>
                       
                     </form>

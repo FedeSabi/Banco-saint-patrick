@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Home } from "./Components/Home";
 import Beneficios from "./Pages/Beneficios";
@@ -21,19 +21,8 @@ import { TransfTarjeta1 } from "./Pages/tranfTarjeta1";
 import { TransfTarjeta2 } from "./Pages/TranfTarjeta2";
 import { TransfRealizada } from "./Pages/TransfRealizada";
 import { IniciarSesion } from "./Pages/IniciarSesion";
+import { NavbarSesion } from "./Components/NavbarSesion";
 
-
-/*const RenderNavbar = ({ login, onLogout }) => {
-  const navigate = useNavigate();
-
-  const shouldRenderNavbar = !["/Registrarse", "/Login"].includes(
-    window.location.pathname
-  );
-
-  return shouldRenderNavbar ? (
-    <Navbar login={login} onLogout={onLogout} />
-  ) : null;
-};*/
 
 function App() {
   const [login, setLogin] = useState("");
@@ -45,32 +34,55 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Navbar />
-      {/*<RenderNavbar login={login} onLogout={handleLogout} />*/}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login setLogin={setLogin} />} />
-        <Route path="/HomeTarjetas" element={<HomeTarjetas login={login}/>} />
-        <Route path="/Registrarse" element={<Registrarse />} />
-        <Route path="/beneficios" element={<Beneficios />} />
-        <Route path="/historial" element={<Historial />} />
-        <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
-        <Route path="/transferir" element={<Transferir  />} />
-        <Route path="/transfTarjeta1" element={<TransfTarjeta1  />} />
-        <Route path="/transfTarjeta2" element={<TransfTarjeta2  />} />
-        <Route path="/transfRealizada" element={<TransfRealizada  />} />
-        <Route path="/iniciarSesion" element={<IniciarSesion />} />
-       {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}
-       
-        <Route path="/Registrarse" element={<Registrarse />} />
-        <Route path="/Beneficios" element={<Beneficios />} />
-        <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
-        <Route path="/Institucional" element={<Institucional />} />
-        <Route path="/Productosyservicios" element={<ProductosYservicios />} />
-        <Route path="/CanalesDeAtencion" element={<CanalesDeAtencion />}/>
-        <Route path="/UniteASaintPatrick" element={<UniteASaintPatrick />} />
-        <Route path="/SolicitaTuTarjeta" element={<SolicitaTuTarjeta />} />
-      </Routes>
+      {login ? (
+        <>
+          <NavbarSesion login={login} onLogout={handleLogout} />
+
+          <Routes>
+            <Route path="/Login" element={<HomeTarjetas login={login} />} />
+            <Route path="/homeTarjetas" element={<HomeTarjetas login={login} />} />
+            <Route path="/historial" element={<Historial />} />
+            <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
+            <Route path="/transferir" element={<Transferir />} />
+            <Route path="/transfTarjeta1" element={<TransfTarjeta1 />} />
+            <Route path="/transfTarjeta2" element={<TransfTarjeta2 />} />
+            <Route path="/transfRealizada" element={<TransfRealizada />} />
+          </Routes>
+
+        </>
+
+      ) : (
+        <>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Login" element={<Login setLogin={setLogin} />} />
+
+            <Route path="/Registrarse" element={<Registrarse />} />
+            <Route path="/beneficios" element={<Beneficios />} />
+
+            <Route path="/iniciarSesion" element={<IniciarSesion />} />
+            {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}
+
+            <Route path="/Registrarse" element={<Registrarse />} />
+            <Route path="/Beneficios" element={<Beneficios />} />
+            <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />
+            <Route path="/Institucional" element={<Institucional />} />
+            <Route path="/Productosyservicios" element={<ProductosYservicios />} />
+            <Route path="/CanalesDeAtencion" element={<CanalesDeAtencion />} />
+            <Route path="/UniteASaintPatrick" element={<UniteASaintPatrick />} />
+            <Route path="/SolicitaTuTarjeta" element={<SolicitaTuTarjeta />} />
+          </Routes>
+
+        </>
+
+
+      )
+
+      }
+
+
+
       <Footer />
     </BrowserRouter>
   );

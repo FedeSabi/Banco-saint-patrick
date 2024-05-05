@@ -1,11 +1,12 @@
 import { useState } from 'react';
-//import tarjeta1 from "/tarjeta1.png";
+import tarjeta1 from "/tarjeta1.png";
 
 import logo from "/logo.png";
 import chip from "/img_chip.jpg";
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const TransfTarjeta1 = (nombre) => {
     const [tarjeta1Seleccionada, setTarjeta1Seleccionada] = useState(false);
@@ -91,7 +92,7 @@ const TransfTarjeta1 = (nombre) => {
                     </div>
                     <div onClick={handleCardClick}>
                         {click ? (
-                            <div  className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ${click ? 'rotated-card' : ''}`}>
+                            <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ${click ? 'rotated-card' : ''}`}>
                                 <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
                                 <div class={'  absolute top-10 h-[34vh] flex flex-col  '}>
                                     <div className='w-[599px]'>
@@ -240,13 +241,13 @@ const TransfTarjeta1 = (nombre) => {
                         )
 
                         }
-                        
+
                     </div>
-                   
-                            
+
+
                 </div>
                 <div className='h-[41vh] mt-[61px] flex  justify-center items-center'>
-                    <form  onSubmit={EnvioFormulario} className='w-[32vw] h-[86%] flex flex-col justify-around'>
+                    <form onSubmit={EnvioFormulario} className='w-[32vw] h-[86%] flex flex-col justify-around'>
 
                         <div className="mb-4">
                             <label htmlFor="" className='font-custom font-semibold text-customGrayTranf text-[28px]'>Monto a transferir</label>
@@ -266,8 +267,9 @@ const TransfTarjeta1 = (nombre) => {
                 <form onSubmit={EnvioFormulario} className='w-[40vw]'>
 
 
-
-                    <button type="submit" className="w-full h-[58px] mb-5 bg-customGray text-customBlack font-custom font-extrabold px-4 py-2 rounded-[1rem] hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Confirmar Transferencia </button>
+                    <Link to={'/transfRealizada'}>
+                        <button type="submit" className="w-full h-[58px] mb-5 bg-customGray text-customBlack font-custom font-extrabold px-4 py-2 rounded-[1rem] hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Confirmar Transferencia </button>
+                    </Link>
                     <button type="submit" className="w-full h-[58px] bg-customGray text-customBlack font-custom font-extrabold px-4 py-2 rounded-[1rem] hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Cancelar</button>
 
                 </form>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import tarjeta1 from "/tarjeta1.png";
+import tarjeta1 from "./../../public/Tarjeta1.png";
 
 import logo from "/logo.png";
 import chip from "/img_chip.jpg";

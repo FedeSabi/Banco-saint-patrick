@@ -30,7 +30,7 @@ const Navbar = () => {
   );
   return (
     <nav>
-      <div className="h-10vh flex justify-between z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
+      <div className="h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
         <div className="flex items-center">
           <img
             className="h-28"
@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
           <div className="flex-10">
-            <ul className="2xl:text-2xl xl:text-2xl lg:text-xl flex gap-12 text-xl font-semibold ">
+            <ul className="2xl:text-2xl xl:text-2xl lg:text-xl flex gap-16 text-xl font-semibold ">
               <li>
                 <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>

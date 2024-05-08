@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import tarjeta1 from './../../public/Tarjeta1.png'
-import tarjeta2 from './../../public/Tarjeta2.png'
-import logo from "/logo.png"
-import chip from "/img_chip.jpg"
+import tarjeta1 from '../../public/tarjeta1.png'
+import tarjeta2 from '../../public/tarjeta2.png'
+import logo from "../../public/logo.png"
+import chip from "../../public/img_chip.jpg"
 import { Link } from 'react-router-dom';
 
 
@@ -65,7 +65,7 @@ const HomeTarjetas = (nombre) => {
                                         <img class="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src={chip} alt="" />
                                     </div>
                                     <div class="flex justify-center">
-                                        <p class="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3.8rem]">
+                                        <p class="font-[200] tracking-more-wider w-full text-[35px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3.8rem]">
                                             4642 3489 9867 7632
                                         </p>
                                     </div>
@@ -132,7 +132,7 @@ const HomeTarjetas = (nombre) => {
                                         <img class="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src={chip} alt="" />
                                     </div>
                                     <div class="flex justify-center">
-                                        <p class="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3.8rem]">
+                                        <p class="font-[200] tracking-more-wider w-full text-[35px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3.8rem]">
                                             4642 3489 9867 7632
                                         </p>
                                     </div>

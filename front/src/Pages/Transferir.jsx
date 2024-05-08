@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import tarjeta1 from './../../public/Tarjeta1.png'
-import tarjeta2 from './../../public/Tarjeta2.png'
-import logo from "/logo.png";
-import chip from "/img_chip.jpg";
+import tarjeta1 from '../../public/tarjeta1.png'
+import tarjeta2 from '../../public/tarjeta2.png'
+import logo from "../../public/logo.png";
+import chip from "../../public/img_chip.jpg";
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
 import axios from 'axios';
@@ -192,7 +192,7 @@ const Transferir = (nombre) => {
 
                             }
                         </div>
-                        <form class=" mt-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
+                        <form class=" my-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
                             <label for="saldoDisponible" class="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl mt-10 font-custom font-medium">Saldo disponible</label>
 
                             <input type="text" id="saldoDisponible" class="form-input  font-semibold mt-4  h-[75px] w-full px-4 py-2 border-[0.5px] border-[#695959] rounded-[1rem] text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl bg-customBg " value='$-1.500.000' readOnly placeholder="Saldo disponible" />

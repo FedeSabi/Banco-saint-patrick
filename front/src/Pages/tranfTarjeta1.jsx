@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import tarjeta1 from "./../../public/Tarjeta1.png";
-
-import logo from "/logo.png";
-import chip from "/img_chip.jpg";
+import tarjeta1 from '../../public/tarjeta1.png';
+import logo from "../../public/logo.png";
+import chip from "../../public/img_chip.jpg";
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
 import axios from 'axios';
@@ -79,171 +78,119 @@ const TransfTarjeta1 = (nombre) => {
 
 
                     <div className="flex items-center mb-5">
-                        <input
-                            type="checkbox"
-                            id="tarjeta1"
-                            checked={tarjeta1Seleccionada}
-                            onChange={handleTarjeta1Change}
-                            className="rounded-full appearance-none w-6 h-6 border-2 border-gray-300 checked:bg-blue-500 checked:border-transparent focus:outline-none"
-                        />
+                      
                         <label htmlFor="tarjeta1" className="ml-2 text-black text-xl sm:text-2xl  font-custom font-semibold">
                             Tarjeta 1
                         </label>
                     </div>
                     <div onClick={handleCardClick}>
-                        {click ? (
-                            <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ${click ? 'rotated-card' : ''}`}>
-                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
-                                <div class={'  absolute top-10 h-[34vh] flex flex-col  '}>
-                                    <div className='w-[599px]'>
-
-
-                                        <div class="pt-1 bg-black h-[5rem] ">
-
-
+                            {click ? (
+                                <div className={`w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${click ? 'rotated-card' : ''}`}>
+                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta1} />
+                                    <div className=" w-full  absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
+                                        <div className="w-full">
+                                            <div className=" sm:mt-5 bg-black h-10 sm:h-[2vh]  md:h-[5rem] lg:h-[5rem] xl:h-[5rem]  2xl:h-[3rem] 2xl:h-[5rem]"></div>
                                         </div>
-                                    </div>
+                                        <div className='flex items-end justify-end'>
 
-                                    <div className='flex items-end justify-end'>
+                                            <div className='bg-green-200 '>
 
-                                        <div className='bg-green-200 '>
+                                                <p className={`text-black ${click2 ? 'rotated-card' : ''}`}>305</p>
+                                            </div>
 
-                                            <p className={`text-black ${click ? 'rotated-card' : ''}`}>255</p>
-                                        </div>
+                                            <div className=' '>
 
-                                        <div className='w-[20vw] '>
-
-                                            <div className="pt-1 bg-white mt-10 flex justify-start w-[365px] ">
+                                                <div className="pt-1 bg-white mt-10 flex justify-start w-[365px] ">
 
 
-                                                <div className='flex justify-start  '>
+                                                    <div className='flex justify-start  '>
 
-                                                    <p class={`font-[200] text-[25px] text-black pr-5  ${click ? 'rotated-card' : ''}`}>
-                                                        8252
-                                                    </p>
+                                                        <p class={`font-[200] text-[25px] text-black pr-5  ${click ? 'rotated-card' : ''}`}>
+                                                            7000
+                                                        </p>
+
+                                                    </div>
+
+                                                    <div className={`w-[154px] flex justify-start ${click ? 'rotated-card' : ''}`}>
+                                                        <FcSignature size={36} />
+                                                    </div>
 
                                                 </div>
 
-                                                <div className={`w-[154px] flex justify-start ${click ? 'rotated-card' : ''}`}>
-                                                    <FcSignature size={36} />
-                                                </div>
 
                                             </div>
 
 
                                         </div>
-
-
+                                        <div className="flex justify-end">
+                                            <h1 className={`pl-5 ${click ? 'rotated-card' : ''}`}>Firma autorizada</h1>
+                                        </div>
+                                        <div className="mt-10">
+                                            <p className={`text-start pl-5 ${click ? 'rotated-card' : ''}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae repellat sed deleniti nihil similique, exercitationem numquam ducimus mollitia quibusdam delectus reprehenderit repellendus! Quisquam ad sapiente vel error exercitationem corrupti.</p>
+                                        </div>
                                     </div>
-
-                                    <div className='flex justify-end'>
-                                        <h1 className={` pl-5 ${click ? 'rotated-card' : ''}`}>
-                                            Firma autorizada
-                                        </h1>
-                                    </div>
-                                    <div className='mt-10'>
-                                        <p className={`text-start pl-5 ${click ? 'rotated-card' : ''}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vitae repellat sed deleniti nihil similique, exercitationem numquam ducimus mollitia quibusdam delectus reprehenderit repellendus! Quisquam ad sapiente vel error exercitationem corrupti.</p>
-                                    </div>
-
                                 </div>
 
 
+                            ) : (
+                                <div>
 
+                                    <div class="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
 
+                                        <img class="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[430px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta1} />
 
+                                        <div class="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 
-
-
-                            </div>
-
-                        ) : (
-                            <div className={`w-[600px] h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  `}>
-                                <img class="relative object-cover w-full h-full rounded-[1.35rem]" src={tarjeta1} />
-
-                                <div class="w-full px-8 absolute top-1 h-[38vh] flex flex-col justify-around">
-
-                                    <div class="flex justify-between">
-                                        <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-serif font-semibold'>Saint Patrick</h1>
-                                        <img class="w-24 h-34" src={logo} />
-                                    </div>
-                                    <div class="pt-1">
-                                        <div className='w-[96px] flex justify-center'>
-                                            <img className='w-10 ' src={chip} alt="" />
-                                        </div>
-                                        <div className='flex justify-center text-[53px]'>
-                                            <p class="font-[200] tracking-more-wider">
-                                                4642  3489  9867  7632
-                                            </p>
-
-                                        </div>
-                                    </div>
-
-                                    <div class=" pr-6 flex justify-end">
-
-
-                                        <div class="flex justify-around ">
-                                            <div class="flex">
-                                                <div class="font-[500] text-xs">
-                                                    <p className='mr-3 text-black'>
-                                                        Valid
-                                                    </p>
-                                                    <p className='text-black'>
-                                                        from
+                                            <div class="flex justify-between">
+                                                <h1 class="mt-5 text-base sm:text-lg md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-serif font-semibold">Saint Patrick</h1>
+                                                <img class="mt-5 w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[6rem] md:h-[8rem] lg:w-24 lg:h-[8rem] xl:w-24 xl:h-[8rem] 2xl:w-24 2xl:h-[8rem]" src={logo} />
+                                            </div>
+                                            <div class="pt-1">
+                                                <div class="w-[96px] ">
+                                                    <img class="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src={chip} alt="" />
+                                                </div>
+                                                <div class="flex justify-center">
+                                                    <p class="font-[200] tracking-more-wider w-full text-[35px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3rem]">
+                                                        4642 3489 9867 7632
                                                     </p>
                                                 </div>
-                                                <p class="font-medium tracking-wider text-sm">
-                                                    11/15
-                                                </p>
                                             </div>
-                                            <div class="flex">
-                                                <div class="font-[500] text-xs text-xs">
-                                                    <p className='mr-3 text-black'>
-                                                        Good
-                                                    </p>
-                                                    <p className='text-black'>
-                                                        thru
-                                                    </p>
 
-
+                                            <div class="flex justify-end">
+                                                <div class="flex justify-around w-[270px]">
+                                                    <div class="flex">
+                                                        <div class="font-[500] text-md">
+                                                            <p class="mr-3 text-black">Valid</p>
+                                                            <p class="text-black">from</p>
+                                                        </div>
+                                                        <p class="font-normal tracking-wider text-2xl">11/15</p>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="font-[500] text-md">
+                                                            <p class="mr-3 text-black">Good</p>
+                                                            <p class="text-black">thru</p>
+                                                        </div>
+                                                        <p class="font-normal tracking-wider text-2xl">03/25</p>
+                                                    </div>
                                                 </div>
-                                                <p class="font-medium tracking-wider text-sm">
-                                                    03/25
-                                                </p>
-
                                             </div>
-
-
+                                            <div class="flex justify-between xl:mb-10 md:mb-10">
+                                                <h1 class="text-[20px] sm:text-[28px] md:text-[30px] lg:text[33px] xl:text-[33px] 2xl:text-[35px] font-serif font-semibold">{nombre.login}</h1>
+                                                <p class="flex items-end">1425</p>
+                                            </div>
                                         </div>
-
-                                    </div>
-                                    <div class="flex justify-between">
-
-                                        <h1 class='text-2xl  font-serif font-semibold'>
-                                            {nombre.login}
-                                        </h1>
-                                        <p className='flex items-end'>
-                                            1425
-                                        </p>
                                     </div>
 
 
 
                                 </div>
-                                <div className='h-[17%] flex justify-center items-end'>
-                                    <a className='text-customBlack text-[26px] font-custom ' href="#">Elegir otra tarjeta</a>
-                                </div>
-
-                            </div>
 
 
 
+                            )
 
-                        )
-
-                        }
-
-                    </div>
-
+                            }
+                        </div>
 
                 </div>
                 <div className='h-[41vh] mt-[61px] flex  justify-center items-center'>

@@ -43,9 +43,9 @@ function App() {
             <Route path="/homeTarjetas" element={<HomeTarjetas login={login} />} />
             <Route path="/historial" element={<Historial />} />
             <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
-            <Route path="/transferir" element={<Transferir />} />
-            <Route path="/transfTarjeta1" element={<TransfTarjeta1 />} />
-            <Route path="/transfTarjeta2" element={<TransfTarjeta2 />} />
+            <Route path="/transferir" element={<Transferir login={login} />} />
+            <Route path="/transfTarjeta1" element={<TransfTarjeta1 login={login}/>} />
+            <Route path="/transfTarjeta2" element={<TransfTarjeta2 login={login}/>} />
             <Route path="/transfRealizada" element={<TransfRealizada />} />
           </Routes>
 

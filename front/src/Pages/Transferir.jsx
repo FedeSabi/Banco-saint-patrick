@@ -14,7 +14,7 @@ const Transferir = (nombre) => {
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     console.log(click);
-    const [monto, setmMonto] = useState("");
+    const [monto, setMonto] = useState("");
     const [destinatario, setdestinatario] = useState("");
     const [mensaje, setMensaje] = useState(false);
     const [envioMensaje, setEnvioMensaje] = useState("");

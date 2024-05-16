@@ -10,8 +10,8 @@ const Navbar = () => {
   }
   const content = (
     <>
-      <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition ">
-        <ul className="text-center text-xl text-amber-400 p-20">
+      <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition" onClick={handleClick}>
+        <ul className="text-center text- w-full text-amber-400 p-20">
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/SolicitaTuTarjeta'}>Solicita tu tarjeta</Link>
           </li>
@@ -19,10 +19,10 @@ const Navbar = () => {
             <Link spy={true} smooth={true} to={'/'} >Hacete cliente</Link>
           </li>
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
-            <Link spy={true} smooth={true} to={'/'}>Preguntas frecuentes</Link>
+            <Link spy={true} smooth={true} to={'/PreguntasFrecuentes'}>Preguntas frecuentes</Link>
           </li>
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
-            <Link spy={true} smooth={true} to={'/'}>Beneficios</Link>
+            <Link spy={true} smooth={true} to={'/Beneficios'}>Beneficios</Link>
           </li>
         </ul>
       </div>
@@ -30,7 +30,7 @@ const Navbar = () => {
   );
   return (
     <nav>
-      <div className="h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
+      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
         <div className="flex items-center">
           <img
             className="h-28"
@@ -65,7 +65,7 @@ const Navbar = () => {
             {click && content}
         </div>
         <button className="block sm:hidden transition text-yellow-400" onClick={handleClick}>
-          {click ? <FaTimes /> : <GiHamburgerMenu />}
+          {click ? <FaTimes className="hidden" /> : <GiHamburgerMenu />}
         </button>
       </div>
     </nav>

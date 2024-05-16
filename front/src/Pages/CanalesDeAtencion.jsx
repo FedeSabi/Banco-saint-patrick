@@ -7,10 +7,10 @@ import NavbarInterno from "./NavbarInterno";
 const CanalesDeAtencion = () => {
   return (
     <div>
-      <NavbarInterno />
+     <NavbarInterno />
       {/*primera fila */}
-      <div className="flex justify-evenly mb-28 mt-10">
-        <div className="flex flex-col w-72 text-center items-center gap-6">
+      <div className="sm:flex ml-16 items-center flex-col md:flex lg:flex-row xl:flex-row 2xl:flex-row justify-evenly mb-28 mt-10">
+        <div className="flex flex-col w-72 text-center items-center gap-6 mb-12 ">
           <CgLaptop className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">
             Online Banking
@@ -20,7 +20,7 @@ const CanalesDeAtencion = () => {
             realiza tus transacciones de maneja segura
           </p>
         </div>
-        <div className="flex flex-col w-72 text-center items-center gap-6">
+        <div className="flex flex-col w-72 text-center items-center gap-6 ">
           <MdHeadsetMic className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">
             Banca Telefonica
@@ -29,8 +29,8 @@ const CanalesDeAtencion = () => {
         </div>
       </div>
       {/*segunda fila */}
-      <div className="flex justify-evenly mb-28 mt-10">
-        <div className="flex flex-col w-72 text-center items-center gap-6">
+      <div className="sm:flex ml-16 items-center flex-col  md:flex lg:flex-row xl:flex-row 2xl:flex-row justify-evenly mb-28 mt-10">
+        <div className="flex flex-col w-72 text-center items-center gap-6 mb-12">
           <GiPositionMarker className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">Sucursales</h1>
           <p className="text-xl">

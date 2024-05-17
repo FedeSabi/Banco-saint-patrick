@@ -12,7 +12,7 @@ const Navbar = () => {
   const content = (
     <>
       <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition" onClick={handleClick}>
-        <ul className="text-center text- w-full text-amber-400 p-20">
+        <ul className="text-center text- w-full text-amber-400 p-28">
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/SolicitaTuTarjeta'}>Solicita tu tarjeta</Link>
           </li>

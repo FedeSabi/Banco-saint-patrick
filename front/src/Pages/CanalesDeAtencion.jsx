@@ -20,7 +20,7 @@ const CanalesDeAtencion = () => {
             realiza tus transacciones de maneja segura
           </p>
         </div>
-        <div className="flex flex-col w-72 text-center items-center gap-6 ">
+        <div className="flex flex-col w-72 text-center items-center gap-6 mb-12 ">
           <MdHeadsetMic className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">
             Banca Telefonica

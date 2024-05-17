@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
         <div className="flex items-center">
           <img
-            className="h-28"
+            className="lg:-ml-10 lg:h-20 lg:w-28 h-28"
             src="/logo.png"
             alt="logo saint patric"z
           />

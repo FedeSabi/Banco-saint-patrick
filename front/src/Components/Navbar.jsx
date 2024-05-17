@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
@@ -30,15 +31,15 @@ const Navbar = () => {
   );
   return (
     <nav>
-      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
-        <div className="flex items-center">
+      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4 ">
+        <div className="xs:hidden xl:flex items-center">
           <img
-            className="lg:-ml-10 lg:h-20 lg:w-28 h-28"
+            className="h-28"
             src="/logo.png"
             alt="logo saint patric"z
           />
         </div>
-        <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
+        <div className=" md:flex lg:flex items-center justify-around font-normal hidden">
           <div className="flex-10">
             <ul className="2xl:text-2xl xl:text-2xl lg:text-xl flex gap-16 text-xl font-semibold ">
               <li>
@@ -61,11 +62,11 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div>
+        <div className="xs:-m-20">
             {click && content}
         </div>
-        <button className="block sm:hidden transition text-yellow-400" onClick={handleClick}>
-          {click ? <FaTimes className="hidden" /> : <GiHamburgerMenu />}
+        <button className="xs:h-40 block sm:hidden transition text-yellow-400" onClick={handleClick}>
+          {click ? <FaTimes className="hidden" /> : <GiHamburgerMenu className="xs:w-[50px] xs:h-[50px] "/>}
         </button>
       </div>
     </nav>
@@ -73,6 +74,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
 

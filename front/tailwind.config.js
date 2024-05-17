@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: '410px', // Define el punto de interrupción para 620px
+        xs: '380px', // Define el punto de interrupción para 620px
       },
       colors: {
         customBg: '#F6F6F6',

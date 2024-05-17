@@ -12,7 +12,7 @@ const Institucional = () => {
   return (
     <div>
   <NavbarInterno />
-  <div className="sm:flex-row ml-10 md:flex lg:flex xl:flex justify-around mb-28 mt-10">
+  <div className="sm:flex-row ml-10 md:flex lg:flex xl:flex justify-around xs:text-center mb-28 mt-10">
     <div className="flex flex-col w-80 text-center items-center gap-6 mb-4">
       <img
         src={LogoSinColor}

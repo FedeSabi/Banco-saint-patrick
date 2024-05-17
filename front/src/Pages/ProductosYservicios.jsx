@@ -13,7 +13,7 @@ const ProductosYservicios = () => {
     <div>
       <NavbarInterno />
       {/*primer fila de iconos */}
-      <div className="flex justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
+      <div className=" flex xs:flex-col xl:flex-row justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
         <div className="flex flex-col text-center items-center gap-1 ">
           <BiPackage style={{ fontSize: "92.88px" }} />
           <p className="text-xl">Paquetes</p>

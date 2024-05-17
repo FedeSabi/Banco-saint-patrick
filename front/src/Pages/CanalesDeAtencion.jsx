@@ -20,7 +20,7 @@ const CanalesDeAtencion = () => {
             realiza tus transacciones de maneja segura
           </p>
         </div>
-        <div className="flex flex-col w-72 text-center items-center gap-6 mb-12 ">
+        <div className="flex flex-col w-72 text-center items-center gap-6 mb-20 ">
           <MdHeadsetMic className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">
             Banca Telefonica
@@ -37,7 +37,7 @@ const CanalesDeAtencion = () => {
             Encontra tu sucursal mas cercana de forma simple y comoda
           </p>
         </div>
-        <div className="flex flex-col w-72 text-center items-center gap-6">
+        <div className="flex flex-col w-72 text-center items-center gap-6 mb-16">
           <GrAtm className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">Autoservicio</h1>
           <p className="text-xl">

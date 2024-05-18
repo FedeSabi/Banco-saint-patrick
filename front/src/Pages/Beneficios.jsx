@@ -41,12 +41,12 @@ const Beneficios = () => {
 
   return (
     <div>
-      <div className="flex xs:flex-col xl:flex-row xs:ml-[30px] xl:ml-36 xs:h-[600px] xl:h-[500px] xs:w-[360px] xl:w-[80vw] mt-12 mb-16">
+      <div className="flex xs:flex-col xl:flex-row xs:ml-[30px] xl:ml-36 xs:h-[600px] xl:h-[500px] xs:w-[360px] xl:w-[80vw] mt-8 mb-16">
         <div className="flex-grow relative ">
           <div className="absolute top-0 right-0 bottom-0 left-4 flex items-center justify-around border-2 rounded-2xl ">
             <img
               src={slides[currentSlide].image}
-              className="object-cover xs:h-[180px] xl:h-[450px] w-auto xs: mt-32 xl:ml-[620px]"
+              className="object-cover xs:h-[180px] xl:h-[400px] w-auto xs:mt-32 xl:ml-[620px] mb-20"
               alt="Carousel Slide"
             />
             <div className="text-black absolute top-0 left-0 xs:ml-20 xl:ml-28 xs:mt-4 xl:mt-20">
@@ -56,7 +56,7 @@ const Beneficios = () => {
               <h1 className="xs:text-xl xl:text-2xl mb-4 xs:w-[200px] xl:w-[400px] xs:text-center xl:text-left flex-row gap-10 items-center">
                 {slides[currentSlide].text2}
               </h1>
-              <h1 className="text-2xl mt-8 w-[400px] text-left flex-row gap-10 items-center">
+              <h1 className=" xs:hidden xl:text-2xl xl:mt-8 xl:w-[400px] xl:text-left xl:flex-row xl:gap-10 xl:items-center">
                 {slides[currentSlide].text3}
               </h1>
               <button className="bg-amber-400 xs:mt-[250px] text-black font-bold xs:text-lg xl:text-2xl xs:px-10 xl:px-20 xs:py-2 xl:py-3 xl:m-2 xl:mt-10 rounded-lg">
@@ -83,3 +83,4 @@ const Beneficios = () => {
 };
 
 export default Beneficios;
+

@@ -23,7 +23,7 @@ const Beneficios = () => {
       image: carousel3,
       text: "Veranito con promos para disfrutar en familia",
       text2: "Tenes ahorros y cuota sin interes estes donde estes",
-      button: "Conocer promos",
+      button: "Promociones",
     },
   ];
 

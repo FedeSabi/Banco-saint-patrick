@@ -9,7 +9,7 @@ const CanalesDeAtencion = () => {
     <div>
       <NavbarInterno />
       {/*primera fila */}
-      <div className="flex justify-evenly mb-28 mt-10">
+      <div className=" sm:flex items-center flex-col ml-[14px] md: flex-col items-center lg:flex-row justify-evenly  items-center xl:flex-row justify-evenly  items-center 2xl:flex-row justify-evenly items-center mb-28 mt-10">
         <div className="flex flex-col w-72 text-center items-center gap-6">
           <CgLaptop className="w-20 h-24 text-customGreen" />
           <h1 className="text-2xl font-bold text-customGreen">

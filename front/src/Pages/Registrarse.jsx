@@ -19,7 +19,7 @@ const Registrarse = () => {
 
         event.preventDefault()
         try {
-            const respuesta = await axios.post('http://localhost:5000/Registrarse', { nombre, numeroTarjeta : Number(numeroTarjeta), pin : Number(pin) });
+            const respuesta = await axios.post('http://localhost:5000/Registrarse', { nombre, numeroTarjeta, pin });
 
             setMensaje(true);
             setEnvioMensaje('Formulario enviado con exito!!!');

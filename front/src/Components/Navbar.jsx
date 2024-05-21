@@ -31,12 +31,15 @@ const Navbar = () => {
   return (
     <nav>
       <div className="h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
-        <div className="flex items-center">
+        <div className="flex items-center ">
+          <Link to={'/'}>
           <img
             className="h-28"
             src="/logo.png"
             alt="logo saint patric"z
           />
+          </Link>
+         
         </div>
         <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
           <div className="flex-10">

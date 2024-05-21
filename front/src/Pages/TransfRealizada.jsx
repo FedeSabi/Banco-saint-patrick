@@ -1,5 +1,6 @@
 import React from 'react';
 import Vector from '/Vector.png';
+import { Link } from 'react-router-dom';
 
 const TransfRealizada = () => {
   return (
@@ -17,16 +18,18 @@ const TransfRealizada = () => {
         <p className="mx-auto mb-4 sm:mb-8 text-lg sm:text-xl md:text-3xl font-custom font-thin text-white text-center max-w-lg">
           Cuenta destino: 4436-6987-2554-3322
         </p>
-        <p className="mx-auto mb-24 sm:mb-40 text-lg sm:text-xl md:text-3xl font-custom font-thin text-white text-center max-w-lg">
+        <p className="mx-auto mb-12 sm:mb-32 text-lg sm:text-xl md:text-3xl font-custom font-thin text-white text-center max-w-lg">
           Fecha: 19 de Enero del 2024
         </p>
         <div className="flex flex-col items-center">
-          <button className="text-customGrayTranf mb-10 font-custom inline-block px-8 sm:px-12 py-3 sm:py-4 bg-customGray rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
+          <button className="text-customGrayTranf mb-10 w-full font-custom inline-block px-8 sm:px-12 py-2  bg-customGray rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
             Realizar otra transferencia
           </button>
-          <button className="text-customGrayTranf inline-block px-8 sm:px-8 py-3 sm:py-4 bg-customGray border-2 rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
+          <Link to={'/iniciarSesion'} className="text-center w-full mb-[10px] text-customGrayTranf inline-block  py-2  bg-customGray border-2 rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
+            
             Salir
-          </button>
+          </Link>
+
         </div>
       </div>
     </div>

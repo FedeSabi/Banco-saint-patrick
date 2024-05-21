@@ -15,11 +15,11 @@ const Login = ({ setLogin }) => {
     event.preventDefault();
     try {
       const respuesta = await axios.post("http://localhost:5000/logearse", {
-        numeroTarjeta: Number(numeroTarjeta),
-        pin: Number(pin),
+        numeroTarjeta,
+        pin,
       });
       setLogin(respuesta.data.nombre);
-
+console.log(respuesta.data.token);
       setMensaje(true);
       setEnvioMensaje("sesion iniciada!!!");
 

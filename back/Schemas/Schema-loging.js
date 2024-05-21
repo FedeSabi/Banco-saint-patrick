@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
   nombre: String,
-  numeroTarjeta : Number,
-  pin : Number,
+  numeroTarjeta : String,
+  pin : String,
 
 
 });

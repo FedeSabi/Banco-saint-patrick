@@ -44,9 +44,10 @@ function App() {
             <Route path="/historial" element={<Historial />} />
             <Route path="/flujos-movimientos" element={<FlujosMovimientos />} />
             <Route path="/transferir" element={<Transferir login={login} />} />
-            <Route path="/transfTarjeta1" element={<TransfTarjeta1 login={login}/>} />
-            <Route path="/transfTarjeta2" element={<TransfTarjeta2 login={login}/>} />
+            <Route path="/transfTarjeta1" element={<TransfTarjeta1 login={login} />} />
+            <Route path="/transfTarjeta2" element={<TransfTarjeta2 login={login} />} />
             <Route path="/transfRealizada" element={<TransfRealizada />} />
+            <Route path="/iniciarSesion" element={<IniciarSesion />} />
           </Routes>
 
         </>
@@ -60,10 +61,7 @@ function App() {
 
             <Route path="/Registrarse" element={<Registrarse />} />
             <Route path="/beneficios" element={<Beneficios />} />
-
-            <Route path="/iniciarSesion" element={<IniciarSesion />} />
             {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}
-
             <Route path="/Registrarse" element={<Registrarse />} />
             <Route path="/Beneficios" element={<Beneficios />} />
             <Route path="/PreguntasFrecuentes" element={<PreguntasFrecuentes />} />

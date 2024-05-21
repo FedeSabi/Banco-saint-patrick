@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { AiOutlineCheck } from "react-icons/ai";
 export const Home = () => {
   return (
-    <section className="bg-customGreen flex w-full">
-      <div className="w-[52vw] h-[124vh] mb-6">
+    <section className="bg-customGreen flex w-full h-[97vh]">
+      <div className="w-[52vw]  mb-6">
         <div className="relative z-10 h-[60px] w-screen flex justify-around items-center border-2 border-solid border-customYellow">
           <Link to={"/Institucional"} className="font-semibold text-[28px] leading-[31.25px] text-customYellow hover:text-black">
             Institucional
@@ -50,7 +50,7 @@ export const Home = () => {
         </button>
       </div>
 
-      <div className="w-[47vw] h-[83vh] flex justify-center items-center">
+      <div className="w-[38vw] h-[61vh] flex justify-center items-center">
         <img
           className=" w-[45vw] ml-10 mt-72"
           src="/hand-card.png"

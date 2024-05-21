@@ -198,11 +198,11 @@ const TransfTarjeta1 = (nombre) => {
 
                         <div className="mb-4">
                             <label htmlFor="" className='font-custom font-semibold text-customGrayTranf text-[28px]'>Monto a transferir</label>
-                            <input type="numero" onChange={(e) => setNumeroTarjeta(e.target.value)} id="numero" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium  px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Monto a transferir" />
+                            <input type="numero" onChange={(e) => setNumeroTarjeta(e.target.value)} value={'$- 1400'} id="numero" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium  px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Monto a transferir" />
                         </div>
                         <div className="mb-6">
                             <label htmlFor="" className='font-custom font-semibold text-customGrayTranf text-[28px]'>Cuenta destino</label>
-                            <input type="numero" onChange={(e) => setPin(e.target.value)} id="pin" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Cuenta destino" />
+                            <input type="numero" onChange={(e) => setPin(e.target.value)} value={'MARIA GONZALEZ'} id="pin" className="bg-customBg form-input w-full h-[58px] text-[28px] text-customBlack  font-medium px-4 py-2 border rounded-[1rem] text-gray-700 focus:ring-blue-500" required placeholder="Cuenta destino" />
 
                         </div>
 

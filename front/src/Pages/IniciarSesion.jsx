@@ -1,6 +1,6 @@
 
 
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import candado from '/candado.png'
 
 
@@ -12,10 +12,10 @@ const IniciarSesion = () => {
 
 
     return (
-        <div className="bg-customBg">
-           <div className='w-full h-[50vh] flex justify-center'>
-    <img className='"w-full h-auto" mt-10 md:mt-12 lg:mt-14 xl:mt-16' src="/image.png" alt="" />
-</div>
+        <div className="bg-customBg h-[100vh]">
+            <div className='w-full h-[42vh] flex justify-center'>
+                <img className='"w-full h-auto" mt-10 md:mt-12 lg:mt-14 xl:mt-16' src="/image.png" alt="" />
+            </div>
 
 
             <div className='flex justify-center'>
@@ -31,14 +31,14 @@ const IniciarSesion = () => {
                 </h1>
 
             </div>
-            <div className='flex justify-center items-end h-[80px]  mt-[7px]'>
+            <div className='flex justify-center items-end h-[80px]  mt-[41px]'>
                 <h1 className='text-2xl md:text-3xl lg:text-3xl  font-custom font-normal ml-[10px] mr-[10px]'>
                     Para ingresar nuevamente inicie sesión nuevamente
                 </h1>
 
             </div>
 
-            <div className=" flex items-center justify-center h-[22vh]">
+            <div className=" flex items-center justify-center h-[12vh] mt-[42px]">
                 <div className="bg-white  rounded-lg  max-w-[37rem] w-full ml-[10px] mr-[10px]">
 
 

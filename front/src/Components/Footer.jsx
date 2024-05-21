@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
         <div className="bg-customGreen">
           <div className="container px-5 py-4 mx-auto">
-            <p className="text-sm text-yellow-500 capitalize xl:text-center">© 2024 All rights reserved </p>
+            <p className="text-sm text-yellow-500 capitalize xs:text-center xl:text-center">© 2024 All rights reserved </p>
           </div>
         </div>
       </footer>

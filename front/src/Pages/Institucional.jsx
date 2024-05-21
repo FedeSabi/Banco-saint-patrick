@@ -12,20 +12,20 @@ const Institucional = () => {
   return (
     <div>
   <NavbarInterno />
-  <div className="flex justify-around mb-28 mt-10">
-    <div className="flex flex-col w-80 text-center items-center gap-6">
+  <div className="sm:flex-row ml-10 md:flex lg:flex xl:flex justify-around xs:text-center mb-28 mt-10">
+    <div className="flex flex-col w-80 text-center items-center gap-6 mb-4">
       <img
         src={LogoSinColor}
         alt="Logo Sin Naranja"
         className="w-16 h-20"
       />
       <h1 className="text-2xl font-bold text-customGreen">Inicio</h1>
-      <p className="text-xl">
+      <p className=" text-xl">
         Establecido el 17 de Noviembre de 2021 como Banco Saint Patrick,
         creado en Argentina
       </p>
     </div>
-    <div className="flex flex-col w-80 text-center items-center gap-3">
+    <div className="flex flex-col w-80 text-center items-center gap-3 mb-4">
       <MdBarChart className="w-20 h-24 text-customGreen" />
       <h1 className="text-2xl font-bold text-customGreen">Crecimiento</h1>
       <p className="text-xl">
@@ -33,7 +33,7 @@ const Institucional = () => {
         para realizar transacciones, entre otras operaciones financieras
       </p>
     </div>
-    <div className="flex flex-col w-80 text-center items-center gap-3">
+    <div className="flex flex-col w-80 text-center items-center gap-3 -mb-12">
       <TbWorld className="w-20 h-24 text-customGreen" />
       <h1 className="text-2xl font-bold text-customGreen">
         SP en el mundo
@@ -45,22 +45,22 @@ const Institucional = () => {
       </p>
     </div>
   </div>
-  <div className="flex justify-around mb-28 mt-10">
-    <div className="flex flex-col w-80 text-center items-center gap-3">
+  <div className="sm:flex-row ml-10 md:flex lg:flex xl:flex justify-around mb-28 mt-10">
+    <div className="flex flex-col w-80 text-center items-center gap-3 mb-4">
       <SiJabber className="w-20 h-24 text-customGreen" />
       <h1 className="text-2xl font-bold text-customGreen">Innovación</h1>
       <p className="text-xl">
         SP cuenta con una estructura empresarial diversificada, fuerte capacidad de innovación y competitividad en el mercado
       </p>
     </div>
-    <div className="flex flex-col w-80 text-center items-center gap-3">
+    <div className="flex flex-col w-80 text-center items-center gap-3 mb-6">
       <RxCrosshair2 className="w-20 h-24 text-customGreen" />
       <h1 className="text-2xl font-bold text-customGreen">Alcance</h1>
       <p className="text-xl">
         En la actualidad, brinda productos y servicios financieros de calidad en 13 países y regiones alrededor del mundo
       </p>
     </div>
-    <div className="flex flex-col w-80 text-center items-center gap-3">
+    <div className="flex flex-col w-80 text-center items-center gap-3 mb-4">
       <VscOrganization className="w-20 h-24 text-customGreen" />
       <h1 className="text-2xl font-bold text-customGreen">
         Estructura
@@ -70,7 +70,7 @@ const Institucional = () => {
       </p>
     </div>
   </div>
-  <div>
+  <div className='hidden lg:block'>
     <div className='w-[1265px] h-[606px] flex justify-center ml-20 border shadow-xl'>
     <img src={Mision} className='w-[910px] h-[606px]'/>
     <div className='mr-10 w-72 h-72 text-left flex flex-col items-start ml-10 gap-12 mt-32 '>
@@ -82,7 +82,7 @@ const Institucional = () => {
      
     </div>
   </div>
-  <div className='mt-40 mb-40 ml-20'>
+  <div className='mt-40 mb-40 ml-20 hidden lg:block'>
     <div className='w-[1265px] h-[606px] flex justify-center  border shadow-xl'>
     <img src={Vision} className='w-[1050px] h-[606px] '/>
     <div className='mr-10 h-72 text-left flex flex-col items-start ml-10 gap-10 mt-32'>

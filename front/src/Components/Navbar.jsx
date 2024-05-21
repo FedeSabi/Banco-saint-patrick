@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
@@ -10,8 +11,8 @@ const Navbar = () => {
   }
   const content = (
     <>
-      <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition ">
-        <ul className="text-center text-xl text-amber-400 p-20">
+      <div className="lg:hidden block relative top-16 w-full left-0 right-0 bg-customGrey transition" onClick={handleClick}>
+        <ul className="text-center text- w-full text-amber-400 p-28">
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
             <Link spy={true} smooth={true} to={'/SolicitaTuTarjeta'}>Solicita tu tarjeta</Link>
           </li>
@@ -19,10 +20,10 @@ const Navbar = () => {
             <Link spy={true} smooth={true} to={'/'} >Hacete cliente</Link>
           </li>
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
-            <Link spy={true} smooth={true} to={'/'}>Preguntas frecuentes</Link>
+            <Link spy={true} smooth={true} to={'/PreguntasFrecuentes'}>Preguntas frecuentes</Link>
           </li>
           <li className="my-4 py-4 border-b border-amber-400 hover:bg-white hover:rounded">
-            <Link spy={true} smooth={true} to={'/'}>Beneficios</Link>
+            <Link spy={true} smooth={true} to={'/Beneficios'}>Beneficios</Link>
           </li>
         </ul>
       </div>
@@ -30,9 +31,14 @@ const Navbar = () => {
   );
   return (
     <nav>
+<<<<<<< HEAD
       <div className="h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
         <div className="flex items-center ">
           <Link to={'/'}>
+=======
+      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4 ">
+        <div className="xs:hidden xl:flex items-center">
+>>>>>>> e9dd49af13639d6f955edba1b208a8f67699b363
           <img
             className="h-28"
             src="/logo.png"
@@ -41,7 +47,7 @@ const Navbar = () => {
           </Link>
          
         </div>
-        <div className="lg:flex md:flex lg:flex-1 items-center justify-around font-normal hidden">
+        <div className=" md:flex lg:flex items-center justify-around font-normal hidden">
           <div className="flex-10">
             <ul className="2xl:text-2xl xl:text-2xl lg:text-xl flex gap-16 text-xl font-semibold ">
               <li>
@@ -64,11 +70,11 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div>
+        <div className="xs:-m-20">
             {click && content}
         </div>
-        <button className="block sm:hidden transition text-yellow-400" onClick={handleClick}>
-          {click ? <FaTimes /> : <GiHamburgerMenu />}
+        <button className="xs:h-40 block sm:hidden transition text-yellow-400" onClick={handleClick}>
+          {click ? <FaTimes className="hidden" /> : <GiHamburgerMenu className="xs:w-[50px] xs:h-[50px] "/>}
         </button>
       </div>
     </nav>
@@ -76,6 +82,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 
 

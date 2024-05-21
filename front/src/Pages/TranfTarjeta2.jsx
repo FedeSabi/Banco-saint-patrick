@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import tarjeta2 from "../../public/tarjeta2.png";
+import tarjeta2 from "../../public/Tarjeta2.png";
 import logo from "../../public/logo.png";
 import chip from "../../public/img_chip.jpg";
 import '../index.css'

@@ -13,7 +13,7 @@ const ProductosYservicios = () => {
     <div>
       <NavbarInterno />
       {/*primer fila de iconos */}
-      <div className="flex justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
+      <div className=" flex xs:flex-col xs:gap-6 xl:flex-row justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
         <div className="flex flex-col text-center items-center gap-1 ">
           <BiPackage style={{ fontSize: "92.88px" }} />
           <p className="text-xl">Paquetes</p>
@@ -28,7 +28,7 @@ const ProductosYservicios = () => {
         </div>
       </div>
       {/*segunda fila de iconos */}
-      <div className="flex justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
+      <div className="flex xs:flex-col xs:gap-6 xl:flex-row justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
         <div className="flex flex-col text-center items-center gap-1 ">
           <FaMoneyBillTransfer style={{ fontSize: "92.88px" }} />
           <p className="text-xl">Prestamos</p>
@@ -38,8 +38,8 @@ const ProductosYservicios = () => {
           <p className="text-xl">E-cheq</p>
         </div>
       </div>
-      {/*primer fila de iconos */}
-      <div className="flex justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
+      {/*tercer fila de iconos */}
+      <div className="flex xs:flex-col xs:gap-6 xl:flex-row justify-evenly items-center h-full font-semibold text-customGreen mb-10 mt-16">
         <div className="flex flex-col text-center items-center gap-1 ">
           <TbFileArrowLeft style={{ fontSize: "92.88px" }} />
           <p className="text-xl">Historial de movimientos</p>

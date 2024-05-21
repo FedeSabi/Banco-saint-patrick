@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import tarjeta1 from '../../public/tarjeta1.png'
-import tarjeta2 from '../../public/tarjeta2.png'
+import tarjeta1 from '../../public/Tarjeta1.png'
+import tarjeta2 from '../../public/Tarjeta2.png'
 import logo from "../../public/logo.png";
 import chip from "../../public/img_chip.jpg";
 import '../index.css'
@@ -14,7 +14,7 @@ const Transferir = (nombre) => {
     const [click, setClick] = useState(false);
     const [click2, setClick2] = useState(false);
     console.log(click);
-    const [monto, setmMonto] = useState("");
+    const [monto, setMonto] = useState("");
     const [destinatario, setdestinatario] = useState("");
     const [mensaje, setMensaje] = useState(false);
     const [envioMensaje, setEnvioMensaje] = useState("");

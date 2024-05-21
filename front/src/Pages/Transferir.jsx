@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import tarjeta1 from '../../public/Tarjeta1.png'
-import tarjeta2 from '../../public/Tarjeta2.png'
+import tarjeta1 from '/tarjeta1.png'
+import tarjeta2 from '/tarjeta2.png'
 import logo from "../../public/logo.png";
 import chip from "../../public/img_chip.jpg";
 import '../index.css'

@@ -31,20 +31,14 @@ const Navbar = () => {
   );
   return (
     <nav>
-<<<<<<< HEAD
-      <div className="h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4">
-        <div className="flex items-center ">
-          <Link to={'/'}>
-=======
       <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4 ">
         <div className="xs:hidden xl:flex items-center">
->>>>>>> e9dd49af13639d6f955edba1b208a8f67699b363
           <img
             className="h-28"
             src="/logo.png"
             alt="logo saint patric"z
           />
-          </Link>
+         
          
         </div>
         <div className=" md:flex lg:flex items-center justify-around font-normal hidden">

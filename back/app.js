@@ -10,6 +10,11 @@ dotenv.config()
 app.use(cors())
 app.use(express.json())
 
+app.get('/', (req, res)=>{
+
+    console.log('hola word')
+})
+
 app.use(router)
 
 app.listen(process.env.PUERTO, ()=> {

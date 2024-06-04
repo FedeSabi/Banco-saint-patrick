@@ -1,8 +1,5 @@
 import { useState } from 'react';
-import tarjeta1 from '../../public/tarjeta1.png'
-import tarjeta2 from '../../public/tarjeta2.png'
-import logo from "../../public/logo.png";
-import chip from "../../public/img_chip.jpg";
+
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
 import axios from 'axios';
@@ -18,6 +15,8 @@ const Transferir = (nombre) => {
     const [destinatario, setdestinatario] = useState("");
     const [mensaje, setMensaje] = useState(false);
     const [envioMensaje, setEnvioMensaje] = useState("");
+    const [numeroTarjeta, setNumeroTarjeta] = useState("");
+    const [pin, setPin] = useState("");
 
 
 
@@ -106,7 +105,7 @@ const Transferir = (nombre) => {
 
                                                     <div className='flex justify-start  '>
 
-                                                        <p class={`font-[200] text-[25px] text-black pr-5  ${click ? 'rotated-card' : ''}`}>
+                                                        <p className={`font-[200] text-[25px] text-black pr-5  ${click ? 'rotated-card' : ''}`}>
                                                             7000
                                                         </p>
 
@@ -136,48 +135,48 @@ const Transferir = (nombre) => {
                             ) : (
                                 <div>
 
-                                    <div class="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
+                                    <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
 
-                                        <img class="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta1} />
+                                        <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='/tarjeta1.png' />
 
-                                        <div class="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
+                                        <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 
-                                            <div class="flex justify-between">
-                                                <h1 class="mt-5 text-base sm:text-lg md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-serif font-semibold">Saint Patrick</h1>
-                                                <img class="mt-5 w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[6rem] md:h-[8rem] lg:w-24 lg:h-[8rem] xl:w-24 xl:h-[8rem] 2xl:w-24 2xl:h-[8rem]" src={logo} />
+                                            <div className="flex justify-between">
+                                                <h1 className="mt-5 text-base sm:text-lg md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-serif font-semibold">Saint Patrick</h1>
+                                                <img className="mt-5 w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[6rem] md:h-[8rem] lg:w-24 lg:h-[8rem] xl:w-24 xl:h-[8rem] 2xl:w-24 2xl:h-[8rem]" src='/logo.png' />
                                             </div>
-                                            <div class="pt-1">
-                                                <div class="w-[96px] ">
-                                                    <img class="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src={chip} alt="" />
+                                            <div className="pt-1">
+                                                <div className="w-[96px] ">
+                                                    <img className="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src='/img_chip.jpg' alt="" />
                                                 </div>
-                                                <div class="flex justify-center">
-                                                    <p class="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3rem]">
+                                                <div className="flex justify-center">
+                                                    <p className="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3rem]">
                                                         4642 3489 9867 7632
                                                     </p>
                                                 </div>
                                             </div>
 
-                                            <div class="flex justify-end">
-                                                <div class="flex justify-around w-[270px]">
-                                                    <div class="flex">
-                                                        <div class="font-[500] text-md">
-                                                            <p class="mr-3 text-black">Valid</p>
-                                                            <p class="text-black">from</p>
+                                            <div className="flex justify-end">
+                                                <div className="flex justify-around w-[270px]">
+                                                    <div className="flex">
+                                                        <div className="font-[500] text-md">
+                                                            <p className="mr-3 text-black">Valid</p>
+                                                            <p className="text-black">from</p>
                                                         </div>
-                                                        <p class="font-normal tracking-wider text-2xl">11/15</p>
+                                                        <p className="font-normal tracking-wider text-2xl">11/15</p>
                                                     </div>
-                                                    <div class="flex">
-                                                        <div class="font-[500] text-md">
-                                                            <p class="mr-3 text-black">Good</p>
-                                                            <p class="text-black">thru</p>
+                                                    <div className="flex">
+                                                        <div className="font-[500] text-md">
+                                                            <p className="mr-3 text-black">Good</p>
+                                                            <p className="text-black">thru</p>
                                                         </div>
-                                                        <p class="font-normal tracking-wider text-2xl">03/25</p>
+                                                        <p className="font-normal tracking-wider text-2xl">03/25</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="flex justify-between xl:mb-10 md:mb-10">
-                                                <h1 class="text-[20px] sm:text-[28px] md:text-[30px] lg:text[33px] xl:text-[33px] 2xl:text-[35px] font-serif font-semibold">{nombre.login}</h1>
-                                                <p class="flex items-end">1425</p>
+                                            <div className="flex justify-between xl:mb-10 md:mb-10">
+                                                <h1 className="text-[20px] sm:text-[28px] md:text-[30px] lg:text[33px] xl:text-[33px] 2xl:text-[35px] font-serif font-semibold">{nombre.login}</h1>
+                                                <p className="flex items-end">1425</p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,10 +191,10 @@ const Transferir = (nombre) => {
 
                             }
                         </div>
-                        <form class=" my-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
-                            <label for="saldoDisponible" class="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl mt-10 font-custom font-medium">Saldo disponible</label>
+                        <form className=" my-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
+                            <label htmlFor="saldoDisponible" className="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl mt-10 font-custom font-medium">Saldo disponible</label>
 
-                            <input type="text" id="saldoDisponible" class="form-input  font-semibold mt-4  h-[75px] w-full px-4 py-2 border-[0.5px] border-[#695959] rounded-[1rem] text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl bg-customBg " value='$-1.500.000' readOnly placeholder="Saldo disponible" />
+                            <input type="text" id="saldoDisponible" className="form-input  font-semibold mt-4  h-[75px] w-full px-4 py-2 border-[0.5px] border-[#695959] rounded-[1rem] text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl bg-customBg " value='$-1.500.000' readOnly placeholder="Saldo disponible" />
                         </form>
 
                     </div>
@@ -217,7 +216,7 @@ const Transferir = (nombre) => {
                         <div onClick={handleCardClick2}>
                             {click2 ? (
                                <div className={`w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${click2 ? 'rotated-card' : ''}`}>
-                               <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta2} />
+                               <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='/tarjeta2.png' />
                                <div className=" w-full  absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
                                    <div className="w-full">
                                        <div className=" sm:mt-5 bg-black h-10 sm:h-[2vh]  md:h-[5rem] lg:h-[5rem] xl:h-[5rem]  2xl:h-[3rem] 2xl:h-[5rem]"></div>
@@ -237,7 +236,7 @@ const Transferir = (nombre) => {
 
                                                     <div className='flex justify-start  '>
 
-                                                        <p class={`font-[200] text-[25px] text-black pr-5  ${click2 ? 'rotated-card' : ''}`}>
+                                                        <p className={`font-[200] text-[25px] text-black pr-5  ${click2 ? 'rotated-card' : ''}`}>
                                                             7000
                                                         </p>
 
@@ -274,48 +273,48 @@ const Transferir = (nombre) => {
                                 </div>
 
                             ) : (
-                                <div class="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
+                                <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
 
-                                    <img class="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta2} />
+                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='/tarjeta2.png' />
 
-                                    <div class="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
+                                    <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 
-                                        <div class="flex justify-between">
-                                            <h1 class="mt-5 text-base sm:text-lg md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-serif font-semibold">Saint Patrick</h1>
-                                            <img class="mt-5 w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[6rem] md:h-[8rem] lg:w-24 lg:h-[8rem] xl:w-24 xl:h-[8rem] 2xl:w-24 2xl:h-[8rem]" src={logo} />
+                                        <div className="flex justify-between">
+                                            <h1 className="mt-5 text-base sm:text-lg md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-serif font-semibold">Saint Patrick</h1>
+                                            <img className="mt-5 w-10 h-15 sm:w-[2rem] sm:h-[4rem] md:w-[6rem] md:h-[8rem] lg:w-24 lg:h-[8rem] xl:w-24 xl:h-[8rem] 2xl:w-24 2xl:h-[8rem]" src='/logo.png '/>
                                         </div>
-                                        <div class="pt-1">
-                                            <div class="w-[96px] ">
-                                                <img class="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src={chip} alt="" />
+                                        <div className="pt-1">
+                                            <div className="w-[96px] ">
+                                                <img className="w-10 h-15 sm:w-[2rem] sm:h-[2rem] md:w-[3rem] md:h-[3rem] lg:w-[2.5rem] lg:h-[2.5rem] xl:w-[2.5rem] xl:h-[2.5rem] 2xl:w-12 2xl:h-[3rem]" src='/img_chip.jpg' alt="" />
                                             </div>
-                                            <div class="flex justify-center">
-                                                <p class="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3rem]">
+                                            <div className="flex justify-center">
+                                                <p className="font-[200] tracking-more-wider w-full text-[39px] sm:text-[20px] md:text-[3.9rem] lg:text-[3.7rem] xl:text-[3.8rem] 2xl:text-[3rem]">
                                                     4642 3489 9867 7632
                                                 </p>
                                             </div>
                                         </div>
 
-                                        <div class="flex justify-end">
-                                            <div class="flex justify-around w-[270px]">
-                                                <div class="flex">
-                                                    <div class="font-[500] text-md">
-                                                        <p class="mr-3 text-black">Valid</p>
-                                                        <p class="text-black">from</p>
+                                        <div className="flex justify-end">
+                                            <div className="flex justify-around w-[270px]">
+                                                <div className="flex">
+                                                    <div className="font-[500] text-md">
+                                                        <p className="mr-3 text-black">Valid</p>
+                                                        <p className="text-black">from</p>
                                                     </div>
-                                                    <p class="font-normal tracking-wider text-2xl">11/15</p>
+                                                    <p className="font-normal tracking-wider text-2xl">11/15</p>
                                                 </div>
-                                                <div class="flex">
-                                                    <div class="font-[500] text-md">
-                                                        <p class="mr-3 text-black">Good</p>
-                                                        <p class="text-black">thru</p>
+                                                <div className="flex">
+                                                    <div className="font-[500] text-md">
+                                                        <p className="mr-3 text-black">Good</p>
+                                                        <p className="text-black">thru</p>
                                                     </div>
-                                                    <p class="font-normal tracking-wider text-2xl">03/25</p>
+                                                    <p className="font-normal tracking-wider text-2xl">03/25</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex justify-between xl:mb-10 md:mb-10">
-                                            <h1 class="text-[20px] sm:text-[28px] md:text-[30px] lg:text[33px] xl:text-[33px] 2xl:text-[35px] font-serif font-semibold">{nombre.login}</h1>
-                                            <p class="flex items-end">1425</p>
+                                        <div className="flex justify-between xl:mb-10 md:mb-10">
+                                            <h1 className="text-[20px] sm:text-[28px] md:text-[30px] lg:text[33px] xl:text-[33px] 2xl:text-[35px] font-serif font-semibold">{nombre.login}</h1>
+                                            <p className="flex items-end">1425</p>
                                         </div>
                                     </div>
                                 </div>
@@ -326,10 +325,10 @@ const Transferir = (nombre) => {
                             }
                         </div>
 
-                        <form class=" mt-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
-                            <label for="saldoDisponible" class="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl mt-10 font-custom font-medium">Saldo disponible</label>
+                        <form className=" mt-[2rem] sm:mt-[2rem] md:mt-[2rem] lg:mt-[4.5rem] xl:mt-[2.5rem] 2xl:mt-[3.5rem] mx-1" action="">
+                            <label htmlFor="saldoDisponible" className="text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl mt-10 font-custom font-medium">Saldo disponible</label>
 
-                            <input type="text" id="saldoDisponible" class="form-input  font-semibold mt-4  h-[75px] w-full px-4 py-2 border-[0.5px] border-[#695959] rounded-[1rem] text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl bg-customBg " value='$-1.500.000' readOnly placeholder="Saldo disponible" />
+                            <input type="text" id="saldoDisponible" className="form-input  font-semibold mt-4  h-[75px] w-full px-4 py-2 border-[0.5px] border-[#695959] rounded-[1rem] text-black text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl bg-customBg " value='$-1.500.000' readOnly placeholder="Saldo disponible" />
                         </form>
                     </div>
 

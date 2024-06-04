@@ -47,7 +47,7 @@ function App() {
             <Route path="/transfTarjeta1" element={<TransfTarjeta1 login={login} />} />
             <Route path="/transfTarjeta2" element={<TransfTarjeta2 login={login} />} />
             <Route path="/transfRealizada" element={<TransfRealizada />} />
-            <Route path="/iniciarSesion" element={<IniciarSesion />} />
+            
           </Routes>
 
         </>
@@ -58,7 +58,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Login" element={<Login setLogin={setLogin} />} />
-
+            <Route path="/iniciarSesion" element={<IniciarSesion />} />
             <Route path="/Registrarse" element={<Registrarse />} />
             <Route path="/beneficios" element={<Beneficios />} />
             {/*} <Route path="/Login" element={<Login setLogin={setLogin} />} />*/}

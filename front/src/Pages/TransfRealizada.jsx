@@ -2,7 +2,7 @@ import React from 'react';
 import Vector from '/Vector.png';
 import { Link } from 'react-router-dom';
 
-const TransfRealizada = () => {
+const TransfRealizada = (onLogout) => {
   return (
     <div className="flex min-h-screen bg-customGreen">
       <div className="mx-auto">
@@ -22,10 +22,11 @@ const TransfRealizada = () => {
           Fecha: 19 de Enero del 2024
         </p>
         <div className="flex flex-col items-center">
-          <button className="text-customGrayTranf mb-10 w-full font-custom inline-block px-8 sm:px-12 py-2  bg-customGray rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
+          
+          <Link to={'/transferir'} className="text-customGrayTranf text-center mb-10 w-full font-custom inline-block px-8 sm:px-12 py-2  bg-customGray rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
             Realizar otra transferencia
-          </button>
-          <Link to={'/iniciarSesion'} className="text-center w-full mb-[10px] text-customGrayTranf inline-block  py-2  bg-customGray border-2 rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
+          </Link>
+          <Link onClick={onLogout}  to={'/iniciarSesion'} className="text-center w-full mb-[10px] text-customGrayTranf inline-block  py-2  bg-customGray border-2 rounded-xl font-medium text-lg sm:text-xl md:text-2xl hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 hover:text-customBlack hover:font-semibold">
             
             Salir
           </Link>

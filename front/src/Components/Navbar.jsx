@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
         <div className=" hidden xs:hidden  md:hidden lg:flex items-center justify-around font-normal ">
           <div className="flex-10">
-            <ul className="w-[81vw] 2xl:text-[34px] 2xl:flex justify-between xl:text-2xl lg:text-md flex gap-[2rem] text-xl font-semibold ">
+            <ul className="w-[81vw] 2xl:text-3xl 2xl:flex justify-between xl:text-2xl lg:text-md flex gap-[2rem] text-xl font-semibold ">
               <li>
                 <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>
@@ -59,7 +59,7 @@ const Navbar = () => {
               </li>
               <div>
                 <Link to={'/Login'}>
-                <button className="rounded-[15px] xl:w-48 lg:w-48 2xl:w-64 h-12 bg-customYellow text-black font-bold -mt-2" > Iniciar sesion</button>
+                <button className="rounded-[15px] xl:w-48 lg:w-48 2xl:w-64 h-12 bg-customYellow text-black 2xl:text-2xl font-bold -mt-2" > Iniciar sesion</button>
                 </Link>
               </div>
             </ul>

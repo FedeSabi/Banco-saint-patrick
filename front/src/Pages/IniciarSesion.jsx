@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 
@@ -41,9 +42,9 @@ const IniciarSesion = () => {
             <div className=" flex items-center justify-center h-[12vh] mt-[42px]">
                 <div className="bg-white  rounded-lg  max-w-[37rem] w-full ml-[10px] mr-[10px]">
 
-
-                    <button type="submit" className="w-full bg-customGray text-customBlack font-bold text-2xl md:text-3xl  px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Iniciar sesión</button>
-
+                    <Link to={'/login'}>
+                        <button type="submit" className="w-full bg-customGray text-customBlack font-bold text-2xl md:text-3xl  px-4 py-2 rounded-lg hover:bg-customYellow focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Iniciar sesión</button>
+                    </Link>
 
 
                 </div>

@@ -47,10 +47,9 @@ router.post('/logearse', async (req, res) => {
             return res.status(401).json({ error: 'PIN incorrecto.' });
         }
 
-        const token = jwt.sign({ numeroTarjeta: user.numeroTarjeta }, process.env.JWT_SECRET);
-        console.log(token)
+     
 
-        res.status(200).json({ message: 'Inicio de sesión exitoso.', nombre: user.nombre, token });
+        res.status(200).json({ message: 'Inicio de sesión exitoso.', nombre: user.nombre });
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Ha ocurrido un error al intentar iniciar sesión.' });

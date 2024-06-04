@@ -69,7 +69,7 @@ const Transferir = (nombre) => {
         <div className='bg-customBg '>
 
 
-            <div class="bg-customBg  w-full min-h-[63vh]  sm:min-h-[63vh]  md:min-h-[54vh]   lg:min-h-[63vh] xl:min-h-[63vh]  flex justify-center items-center md:items-stretch">
+            <div className="bg-customBg  w-full min-h-[63vh]  sm:min-h-[63vh]  md:min-h-[54vh]   lg:min-h-[63vh] xl:min-h-[63vh]  flex justify-center items-center md:items-stretch">
                 <div className="mt-[27px] bg-customBg flex justify-around w-full flex-wrap">
                     <div>
                         <div className="flex items-center mb-5">
@@ -87,7 +87,7 @@ const Transferir = (nombre) => {
                         <div onClick={handleCardClick}>
                             {click ? (
                                 <div className={`w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${click ? 'rotated-card' : ''}`}>
-                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta1} />
+                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='/tarjeta1.png' />
                                     <div className=" w-full  absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
                                         <div className="w-full">
                                             <div className=" sm:mt-5 bg-black h-10 sm:h-[2vh]  md:h-[5rem] lg:h-[5rem] xl:h-[5rem]  2xl:h-[3rem] 2xl:h-[5rem]"></div>

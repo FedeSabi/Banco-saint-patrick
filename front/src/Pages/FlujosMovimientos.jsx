@@ -1,8 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import grafica_1 from '/grafica_1.png';
-import grafica_2 from '/grafica_2.png';
-import grafica_3 from '/grafica_3.png'
+
 
 const FlujosMovimientos = () => {
     return (
@@ -21,7 +19,7 @@ const FlujosMovimientos = () => {
                             </h3>
                         </div>
 
-                        <img src={grafica_1} alt="" />
+                        <img src='/grafica_1.png' alt="" />
                         <div className='flex justify-around w-full bg-customGreen rounded-lg'>
                             <div className=' flex flex-col items-center border-r p-2'>
                                 <h5 className='text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl'>
@@ -57,7 +55,7 @@ const FlujosMovimientos = () => {
                             </h3>
                         </div>
 
-                        <img src={grafica_2} alt="" />
+                        <img src='/grafica_2.png' alt="" />
                         <div className='flex justify-around w-full bg-customGreen rounded-lg'>
                             <div className=' flex flex-col items-center border-r p-2'>
                                 <h5 className='text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-1xl'>
@@ -93,7 +91,7 @@ const FlujosMovimientos = () => {
                             </h3>
                         </div>
 
-                        <img src={grafica_3} alt="" />
+                        <img src='/grafica_3.png' alt="" />
                         <div className='flex justify-around w-full bg-customGreen rounded-lg'>
                             <div className=' flex flex-col items-center border-r p-2'>
                                 <h5 className='text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl '>

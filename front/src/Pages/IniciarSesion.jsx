@@ -1,7 +1,7 @@
 
 
-import { Link } from "react-router-dom";
-import candado from '/candado.png'
+
+
 
 
 const IniciarSesion = () => {
@@ -23,7 +23,7 @@ const IniciarSesion = () => {
             </div>
             <div className='flex justify-center mt-[3%]'>
 
-                <img src={candado} alt="" />
+                <img src='/candado.png' alt="" />
             </div>
             <div className='flex justify-center items-end h-[80px]  mt-[7px]'>
                 <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-custom font-normal ml-[10px] mr-[10px]'>

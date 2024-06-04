@@ -40,8 +40,8 @@ const Beneficios = () => {
   };
 
   return (
-    <div>
-      <div className="flex xs:flex-col xl:flex-row xs:ml-[30px] xl:ml-36 xs:h-[600px] xl:h-[500px] xs:w-[360px] xl:w-[80vw] mt-8 mb-16">
+    <div className="md:flex justify-center">
+      <div className="flex xs:flex-col xl:flex-row xs:ml-[30px]  xs:h-[600px] xl:h-[500px] xs:w-[360px] xl:w-[80vw] mt-8 mb-16">
         <div className="flex-grow relative ">
           <div className="absolute top-0 right-0 bottom-0 left-4 flex items-center justify-around border-2 rounded-2xl ">
             <img

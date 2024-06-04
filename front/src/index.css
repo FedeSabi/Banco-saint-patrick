@@ -16,3 +16,5 @@
   transition-duration: 0.9s; 
  
 }
+
+.xs {@media(max-width: 424px){}}

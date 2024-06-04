@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import tarjeta1 from '/tarjeta1.png'
-import tarjeta2 from '/tarjeta2.png'
+import tarjeta1 from '../../public/tarjeta1.png'
+import tarjeta2 from '../../public/tarjeta2.png'
 import logo from "../../public/logo.png";
 import chip from "../../public/img_chip.jpg";
 import '../index.css'
@@ -96,7 +96,7 @@ const Transferir = (nombre) => {
 
                                             <div className='bg-green-200 '>
 
-                                                <p className={`text-black ${click2 ? 'rotated-card' : ''}`}>305</p>
+                                                <p className={`text-black ${click ? 'rotated-card' : ''}`}>305</p>
                                             </div>
 
                                             <div className=' '>

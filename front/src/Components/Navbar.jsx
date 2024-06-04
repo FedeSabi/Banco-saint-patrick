@@ -31,19 +31,20 @@ const Navbar = () => {
   );
   return (
     <nav>
-      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 px-20 py-4 ">
-        <div className="xs:hidden xl:flex items-center">
+      <div className=" h-10vh flex justify-around z-50 text-customGrey font-semibold text-2xl lg:py-5 pr-20 py-4 ">
+        <div className="xs:hidden md:block  ">
+          <Link to={'/'}>
           <img
             className="h-28"
             src="/logo.png"
             alt="logo saint patric"z
           />
-         
+         </Link>
          
         </div>
-        <div className=" md:flex lg:flex items-center justify-around font-normal hidden">
+        <div className=" hidden xs:hidden  md:hidden lg:flex items-center justify-around font-normal ">
           <div className="flex-10">
-            <ul className="2xl:text-2xl xl:text-2xl lg:text-xl flex gap-16 text-xl font-semibold ">
+            <ul className="w-[81vw] 2xl:text-[34px] 2xl:flex justify-between xl:text-2xl lg:text-md flex gap-[2rem] text-xl font-semibold ">
               <li>
                 <Link to={'/SolicitaTuTarjeta'} className="hover:text-yellow-400 transition border-slate-600 hover:border-customGrey cursor-pointer">Solicita tu tarjeta</Link>
               </li>
@@ -58,7 +59,7 @@ const Navbar = () => {
               </li>
               <div>
                 <Link to={'/Login'}>
-                <button className="rounded-[15px] w-64 h-12 bg-customYellow text-black font-bold -mt-2" > Iniciar sesion</button>
+                <button className="rounded-[15px] xl:w-48 lg:w-48 2xl:w-64 h-12 bg-customYellow text-black font-bold -mt-2" > Iniciar sesion</button>
                 </Link>
               </div>
             </ul>
@@ -67,7 +68,7 @@ const Navbar = () => {
         <div className="xs:-m-20">
             {click && content}
         </div>
-        <button className="xs:h-40 block sm:hidden transition text-yellow-400" onClick={handleClick}>
+        <button className="xs:h-40 xs:ml-[30px] block lg:hidden transition text-yellow-400" onClick={handleClick}>
           {click ? <FaTimes className="hidden" /> : <GiHamburgerMenu className="xs:w-[50px] xs:h-[50px] "/>}
         </button>
       </div>

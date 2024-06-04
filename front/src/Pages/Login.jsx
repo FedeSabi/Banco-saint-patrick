@@ -15,24 +15,25 @@ const Login = ({ setLogin }) => {
     event.preventDefault();
     try {
       const respuesta = await axios.post("http://localhost:5000/logearse", {
+
         numeroTarjeta,
         pin,
       });
+      console.log(respuesta);
       setLogin(respuesta.data.nombre);
-console.log(respuesta.data.token);
+      console.log(respuesta.data.token);
       setMensaje(true);
       setEnvioMensaje("sesion iniciada!!!");
 
       setNumeroTarjeta("");
       setPin("");
     } catch (error) {
-      console.log("error al logearse", error);
+      console.log("Respuesta del servidor:", error.response.data);
+      setEnvioMensaje(error.response.data.error);
     }
   };
 
-  if (mensaje) {
-    return <Navigate to="/HomeTarjetas" />;
-  }
+  
 
   return (
     <div className="bg-customBg ">

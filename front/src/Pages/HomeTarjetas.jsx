@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
-
+import tarjeta_1 from '../assets/tarjeta1.png'
+import tarjeta_2 from '../assets/tarjeta2.png'
 
 import { Link } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ const HomeTarjetas = (nombre) => {
                         </div>
                         <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
 
-                            <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='tarjeta1.png' />
+                            <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_1} />
 
                             <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 
@@ -118,7 +118,7 @@ const HomeTarjetas = (nombre) => {
                         </div>
                         <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl transition-transform transform hover:scale-110">
 
-                            <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='tarjeta2.png' />
+                            <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_2} />
 
                             <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 

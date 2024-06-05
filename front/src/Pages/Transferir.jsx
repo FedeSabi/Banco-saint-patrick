@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import tarjeta_1 from '../assets/tarjeta1.png'
+import tarjeta_2 from '../assets/tarjeta2.png'
 import '../index.css'
 import { FcSignature } from "react-icons/fc";
 import axios from 'axios';
@@ -86,7 +87,7 @@ const Transferir = (nombre) => {
                         <div onClick={handleCardClick}>
                             {click ? (
                                 <div className={`w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${click ? 'rotated-card' : ''}`}>
-                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='tarjeta1.png' />
+                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_1} />
                                     <div className=" w-full  absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
                                         <div className="w-full">
                                             <div className=" sm:mt-5 bg-black h-10 sm:h-[2vh]  md:h-[5rem] lg:h-[5rem] xl:h-[5rem]  2xl:h-[3rem] 2xl:h-[5rem]"></div>
@@ -137,7 +138,7 @@ const Transferir = (nombre) => {
 
                                     <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
 
-                                        <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='tarjeta1.png' />
+                                        <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_1} />
 
                                         <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 
@@ -216,7 +217,7 @@ const Transferir = (nombre) => {
                         <div onClick={handleCardClick2}>
                             {click2 ? (
                                <div className={`w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl  ${click2 ? 'rotated-card' : ''}`}>
-                               <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='tarjeta2.png' />
+                               <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_2} />
                                <div className=" w-full  absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
                                    <div className="w-full">
                                        <div className=" sm:mt-5 bg-black h-10 sm:h-[2vh]  md:h-[5rem] lg:h-[5rem] xl:h-[5rem]  2xl:h-[3rem] 2xl:h-[5rem]"></div>
@@ -275,7 +276,7 @@ const Transferir = (nombre) => {
                             ) : (
                                 <div className="w-full h-[270px] sm:h-[280px] md:h-[425px] lg:h-[353px] xl:h-[400px]  2xl:h-[400px] rounded-[1.35rem] relative text-white shadow-2xl ">
 
-                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src='/tarjeta2.png' />
+                                    <img className="relative object-cover w-full h-[280px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[424px] 2xl:w-[630px] rounded-[1.35rem]" src={tarjeta_2} />
 
                                     <div className="w-full px-8 absolute top-1 h-[270px] sm:h-[280px] md:h-[425px] lg:h-[400px] xl:h-[400px]  2xl:h-[383px] flex flex-col justify-around">
 

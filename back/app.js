@@ -7,12 +7,9 @@ import router from "./routes/User.js";
 const app =express()
 dotenv.config()
 
-const corsOptions = {
-    origin: 'http://localhost:5173', // Cambia esto por el origen de tu aplicación web
-    optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11) pueden mostrar errores sin esta opción
-  };
+
   
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json())
 
 app.get('/', (req, res)=>{

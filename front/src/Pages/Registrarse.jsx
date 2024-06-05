@@ -19,7 +19,7 @@ const Registrarse = () => {
 
         event.preventDefault()
         try {
-            const respuesta = await axios.post('https://banco-saint-patrick-back-lrzjzc16k.vercel.app/Registrarse', { nombre, numeroTarjeta, pin });
+            const respuesta = await axios.post('https://banco-saint-patrick-back.vercel.app/Registrarse', { nombre, numeroTarjeta, pin });
 
             setMensaje(true);
             setEnvioMensaje('Formulario enviado con exito!!!');
